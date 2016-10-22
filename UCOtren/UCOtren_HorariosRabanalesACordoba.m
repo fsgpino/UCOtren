@@ -19,11 +19,18 @@
 
 -(void) viewDidLoad
 {
-    origenSalidasRabanalesACordoba = [[NSMutableArray alloc] initWithObjects:@"7:30",@"7:50",@"8:25",@"8:55",@"9:20",@"10:15",@"11:15",@"12:15",@"13:15",@"14:15",@"14:40",@"15:10",@"15:55",@"16:55",@"17:55",@"19:15",@"19:45",@"20:30",@"21:30",nil];
+    //Declaración de los directorios de trabajo donde se almacenan los horarios
+    NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
+    NSString *fileName = [NSString stringWithFormat:@"tramo-rabanales-cordoba.plist"];
+    NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
     
     //Declaración del horario de cada una de las salidas, el ultimo valor del vector y de un contador auxiliar que se usa en la función
-    int horario[] = {27000, 28200, 30300, 32100, 33600, 36900, 40500, 44100, 47700, 51300, 52800, 54600, 57300, 60900, 64500, 69300, 71100, 73800, 77400};
-    int ultimoValorHorario = 77400;
+    NSArray *dataFile = [[NSArray alloc] initWithContentsOfFile:filePath];
+    origenSalidasRabanalesACordoba = [[dataFile objectAtIndex:4] componentsSeparatedByString: @"|"];
+    
+    //Declaración del horario de cada una de las salidas, el ultimo valor del vector y de un contador auxiliar que se usa en la función
+    int ultimoValorHorario = ([origenSalidasRabanalesACordoba count] - 1);
     int contadorAuxiliar = 0;
     
     //Declaración de un puntero que contiene un formateador de fecha, usado para convertir la hora actual en segundos
@@ -49,19 +56,30 @@
     int TotalSegundosActual = HorasActual*3600+MinutosActual*60+SegundosActual;
     
     //Se verifica que el total de segundos no sea mayor que el ultimo de los horarios y no sea sabado o domingo
-    if((TotalSegundosActual > ultimoValorHorario)||(DiaSemanaActual==6)||(DiaSemanaActual==7))
+    if((TotalSegundosActual > [self StringASegundos:[origenSalidasRabanalesACordoba objectAtIndex:ultimoValorHorario]])||(DiaSemanaActual==6)||(DiaSemanaActual==7))
     {
         //Si se da el caso anterior, pues se empieza mostrando el horario del siguiente día
         contadorAuxiliar=0;
     }else{
         //Si no se da el caso anterior, pues se recorre el vector horario hasta que encontremos la salida inminente
-        while(TotalSegundosActual > horario[contadorAuxiliar])
+        while(TotalSegundosActual > [self StringASegundos:[origenSalidasRabanalesACordoba objectAtIndex:contadorAuxiliar]])
         {
             contadorAuxiliar++;
         }
     }
     
-    horaSiguiente = horario[contadorAuxiliar];
+    horaSiguiente = [self StringASegundos:[origenSalidasRabanalesACordoba objectAtIndex:contadorAuxiliar]];
+}
+
+//FUNCION: StringASegundos (Devuelve en segundos la hora pasada como parametro HH:MM -> S)
+-(NSInteger) StringASegundos: (NSString *) hora
+{
+    NSArray* HH_MM = [hora componentsSeparatedByString: @":"];
+    
+    NSInteger Horas = [[HH_MM objectAtIndex:0] integerValue];
+    NSInteger Minutos = [[HH_MM objectAtIndex:1] integerValue];
+    
+    return ((Horas*3600)+(Minutos*60));
 }
 
 #pragma mark - TableView Data Source methods

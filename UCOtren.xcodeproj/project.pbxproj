@@ -12,7 +12,6 @@
 		C170F2011708EDF7000B0681 /* UCOtren_HorariosRabanalesACordoba.m in Sources */ = {isa = PBXBuildFile; fileRef = C170F2001708EDF6000B0681 /* UCOtren_HorariosRabanalesACordoba.m */; };
 		C192E4BC17006D9900564778 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C192E4BB17006D9900564778 /* UIKit.framework */; };
 		C192E4BE17006D9900564778 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C192E4BD17006D9900564778 /* Foundation.framework */; };
-		C192E4C017006D9900564778 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C192E4BF17006D9900564778 /* CoreGraphics.framework */; };
 		C192E4C617006D9900564778 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C192E4C417006D9900564778 /* InfoPlist.strings */; };
 		C192E4C817006D9A00564778 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C192E4C717006D9A00564778 /* main.m */; };
 		C192E4CC17006D9A00564778 /* UCOtren_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C192E4CB17006D9A00564778 /* UCOtren_AppDelegate.m */; };
@@ -32,6 +31,17 @@
 		C192E501170084DB00564778 /* UCOtren_RabanalesACordoba.m in Sources */ = {isa = PBXBuildFile; fileRef = C192E500170084DB00564778 /* UCOtren_RabanalesACordoba.m */; };
 		C192E5071700857100564778 /* UCOtren_CordobaARabanales.m in Sources */ = {isa = PBXBuildFile; fileRef = C192E5061700857100564778 /* UCOtren_CordobaARabanales.m */; };
 		C192E50917009C9F00564778 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C192E50817009C9F00564778 /* Roboto-Light.ttf */; };
+		C19CD90517CEA9D000B139EC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD90417CEA9D000B139EC /* Parse.framework */; };
+		C19CD90717CEAA3500B139EC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD90617CEAA3500B139EC /* AudioToolbox.framework */; };
+		C19CD90817CEAA3A00B139EC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD8F617CEA8D000B139EC /* CFNetwork.framework */; };
+		C19CD90917CEAA4600B139EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C192E4BF17006D9900564778 /* CoreGraphics.framework */; };
+		C19CD90A17CEAA4E00B139EC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD8F817CEA8E000B139EC /* CoreLocation.framework */; };
+		C19CD90B17CEAA5400B139EC /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD8FC17CEA8F300B139EC /* libz.1.1.3.dylib */; };
+		C19CD90D17CEAA5C00B139EC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD90C17CEAA5C00B139EC /* MobileCoreServices.framework */; };
+		C19CD90E17CEAA6300B139EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD8FE17CEA8FB00B139EC /* QuartzCore.framework */; };
+		C19CD90F17CEAA6A00B139EC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD90017CEA90100B139EC /* Security.framework */; };
+		C19CD91117CEAA7500B139EC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD91017CEAA7500B139EC /* StoreKit.framework */; };
+		C19CD91217CEAA7C00B139EC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD90217CEA90800B139EC /* SystemConfiguration.framework */; };
 		C19DA1D1174F93A30001DD9F /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19DA1D3174F93A30001DD9F /* MainStoryboard-iPad.storyboard */; };
 		C19DA1D6174FB3760001DD9F /* Icon-1024h.png in Resources */ = {isa = PBXBuildFile; fileRef = C19DA1D4174FB3760001DD9F /* Icon-1024h.png */; };
 		C19DA1D7174FB3760001DD9F /* Icon-1024h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C19DA1D5174FB3760001DD9F /* Icon-1024h@2x.png */; };
@@ -45,6 +55,18 @@
 		C1BCA18B170198EE001B934F /* Digital-7-Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BCA18A170198EE001B934F /* Digital-7-Mono.ttf */; };
 		C1BD19371754FAEE001A4BCE /* MainStoryboard-568h.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BD19361754FAEE001A4BCE /* MainStoryboard-568h.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C19CD8F417CEA88500B139EC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C170F1F91708CE8F000B0681 /* UCOtren_Horarios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCOtren_Horarios.h; sourceTree = "<group>"; };
@@ -81,6 +103,16 @@
 		C192E5051700855D00564778 /* UCOtren_CordobaARabanales.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCOtren_CordobaARabanales.h; sourceTree = "<group>"; };
 		C192E5061700857100564778 /* UCOtren_CordobaARabanales.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCOtren_CordobaARabanales.m; sourceTree = "<group>"; };
 		C192E50817009C9F00564778 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		C19CD8F617CEA8D000B139EC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C19CD8F817CEA8E000B139EC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C19CD8FC17CEA8F300B139EC /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		C19CD8FE17CEA8FB00B139EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C19CD90017CEA90100B139EC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C19CD90217CEA90800B139EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C19CD90417CEA9D000B139EC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C19CD90617CEAA3500B139EC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C19CD90C17CEAA5C00B139EC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C19CD91017CEAA7500B139EC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C19DA1D2174F93A30001DD9F /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = "es.lproj/MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
 		C19DA1D4174FB3760001DD9F /* Icon-1024h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-1024h.png"; sourceTree = SOURCE_ROOT; };
 		C19DA1D5174FB3760001DD9F /* Icon-1024h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-1024h@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -100,9 +132,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19CD91217CEAA7C00B139EC /* SystemConfiguration.framework in Frameworks */,
+				C19CD91117CEAA7500B139EC /* StoreKit.framework in Frameworks */,
+				C19CD90F17CEAA6A00B139EC /* Security.framework in Frameworks */,
+				C19CD90E17CEAA6300B139EC /* QuartzCore.framework in Frameworks */,
+				C19CD90D17CEAA5C00B139EC /* MobileCoreServices.framework in Frameworks */,
+				C19CD90B17CEAA5400B139EC /* libz.1.1.3.dylib in Frameworks */,
+				C19CD90A17CEAA4E00B139EC /* CoreLocation.framework in Frameworks */,
+				C19CD90917CEAA4600B139EC /* CoreGraphics.framework in Frameworks */,
+				C19CD90817CEAA3A00B139EC /* CFNetwork.framework in Frameworks */,
+				C19CD90717CEAA3500B139EC /* AudioToolbox.framework in Frameworks */,
 				C192E4BC17006D9900564778 /* UIKit.framework in Frameworks */,
 				C192E4BE17006D9900564778 /* Foundation.framework in Frameworks */,
-				C192E4C017006D9900564778 /* CoreGraphics.framework in Frameworks */,
+				C19CD90517CEA9D000B139EC /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,9 +171,19 @@
 		C192E4BA17006D9900564778 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C19CD91017CEAA7500B139EC /* StoreKit.framework */,
+				C19CD90C17CEAA5C00B139EC /* MobileCoreServices.framework */,
+				C19CD90617CEAA3500B139EC /* AudioToolbox.framework */,
+				C19CD90417CEA9D000B139EC /* Parse.framework */,
+				C19CD8F817CEA8E000B139EC /* CoreLocation.framework */,
+				C192E4BF17006D9900564778 /* CoreGraphics.framework */,
+				C19CD90217CEA90800B139EC /* SystemConfiguration.framework */,
+				C19CD90017CEA90100B139EC /* Security.framework */,
+				C19CD8FE17CEA8FB00B139EC /* QuartzCore.framework */,
+				C19CD8FC17CEA8F300B139EC /* libz.1.1.3.dylib */,
+				C19CD8F617CEA8D000B139EC /* CFNetwork.framework */,
 				C192E4BB17006D9900564778 /* UIKit.framework */,
 				C192E4BD17006D9900564778 /* Foundation.framework */,
-				C192E4BF17006D9900564778 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,6 +271,7 @@
 				C192E4B417006D9900564778 /* Sources */,
 				C192E4B517006D9900564778 /* Frameworks */,
 				C192E4B617006D9900564778 /* Resources */,
+				C19CD8F417CEA88500B139EC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -398,11 +451,19 @@
 		C192E4DC17006D9A00564778 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Francisco Solano Gomez Pino (8Y8DX8Q88R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Francisco Solano Gomez Pino (8Y8DX8Q88R)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCOtren/UCOtren-Prefix.pch";
 				INFOPLIST_FILE = "UCOtren/UCOtren-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "97BB4095-72F0-4DE9-8375-D8C85E377C36";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "97BB4095-72F0-4DE9-8375-D8C85E377C36";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -411,11 +472,19 @@
 		C192E4DD17006D9A00564778 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Francisco Solano Gomez Pino (8Y8DX8Q88R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Francisco Solano Gomez Pino (8Y8DX8Q88R)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCOtren/UCOtren-Prefix.pch";
 				INFOPLIST_FILE = "UCOtren/UCOtren-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "97BB4095-72F0-4DE9-8375-D8C85E377C36";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "97BB4095-72F0-4DE9-8375-D8C85E377C36";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

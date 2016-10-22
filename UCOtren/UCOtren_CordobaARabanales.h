@@ -19,6 +19,7 @@
 @property (nonatomic,strong) IBOutlet UILabel *SombraMinutosRestantesSalidaCordobaARabanales;
 @property (nonatomic,strong) IBOutlet UILabel *horaProximaSalidaCordobaARabanales;
 @property (nonatomic,strong) IBOutlet UILabel *SombraProximaSalidaCordobaARabanales;
+@property (nonatomic,strong) IBOutlet UILabel *FechaActualizacion;
 
 @property (assign) int segundosSalida;
 @property (assign) int segundosRestantesSalida;
@@ -26,6 +27,11 @@
 @property (assign) int alternador;
 @property (assign) int errorMemoria;
 
--(IBAction)informacion:(id)sender;
-
+- (void)inicioDelView;
+- (IBAction)informacion:(id)sender;
+- (IBAction)recargarHorario:(id)sender;
+- (void)relojEnCurso:(NSTimer *)timer;
+- (void)actualizarDatosEnPantalla;
+- (NSInteger) StringASegundos: (NSString *) hora;
+- (NSInteger) actualizaHorario: (NSString *) tramo;
 @end

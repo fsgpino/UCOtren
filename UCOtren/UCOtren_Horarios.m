@@ -28,25 +28,42 @@
     //Arranque por defecto de la función viewDidLoad
     [super viewDidLoad];
     
-    //Se realiza la configuración adicional después de cargar la vista
-    if (controllerSalidasCordobaARabanales == nil) {
-		controllerSalidasCordobaARabanales = [[UCOtren_HorariosCordobaARabanales alloc] init];
-	}
-	if (controllerSalidasRabanalesACordoba == nil) {
-		controllerSalidasRabanalesACordoba = [[UCOtren_HorariosRabanalesACordoba alloc] init];
-	}
-	[tablaSalidasCordobaARabanales setDataSource:controllerSalidasCordobaARabanales];
-	[tablaSalidasRabanalesACordoba setDataSource:controllerSalidasRabanalesACordoba];
-	
-	[tablaSalidasCordobaARabanales setDelegate:controllerSalidasCordobaARabanales];
-	[tablaSalidasRabanalesACordoba setDelegate:controllerSalidasRabanalesACordoba];
-	controllerSalidasCordobaARabanales.view = controllerSalidasCordobaARabanales.tableView;
-	controllerSalidasRabanalesACordoba.view = controllerSalidasRabanalesACordoba.tableView;
+    NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
+    NSString *fileNameCR = [NSString stringWithFormat:@"tramo-cordoba-rabanales.plist"];
+    NSString *filePathCR = [documentDirectory stringByAppendingPathComponent:fileNameCR];
+    NSString *fileNameRC = [NSString stringWithFormat:@"tramo-rabanales-cordoba.plist"];
+    NSString *filePathRC = [documentDirectory stringByAppendingPathComponent:fileNameRC];
     
-    [Scroller setScrollEnabled:YES];
-    [Scroller setContentSize:CGSizeMake(320, 858)];
-    [Scroller_iPad setScrollEnabled:YES];
-    [Scroller_iPad setContentSize:CGSizeMake(540, 858)];
+    if (([[NSFileManager defaultManager] fileExistsAtPath:filePathRC])&&([[NSFileManager defaultManager] fileExistsAtPath:filePathCR]))
+    {
+        //Se realiza la configuración adicional después de cargar la vista
+        if (controllerSalidasCordobaARabanales == nil) {
+            controllerSalidasCordobaARabanales = [[UCOtren_HorariosCordobaARabanales alloc] init];
+        }
+        if (controllerSalidasRabanalesACordoba == nil) {
+            controllerSalidasRabanalesACordoba = [[UCOtren_HorariosRabanalesACordoba alloc] init];
+        }
+        [tablaSalidasCordobaARabanales setDataSource:controllerSalidasCordobaARabanales];
+        [tablaSalidasRabanalesACordoba setDataSource:controllerSalidasRabanalesACordoba];
+	
+        [tablaSalidasCordobaARabanales setDelegate:controllerSalidasCordobaARabanales];
+        [tablaSalidasRabanalesACordoba setDelegate:controllerSalidasRabanalesACordoba];
+        controllerSalidasCordobaARabanales.view = controllerSalidasCordobaARabanales.tableView;
+        controllerSalidasRabanalesACordoba.view = controllerSalidasRabanalesACordoba.tableView;
+    
+        [Scroller setScrollEnabled:YES];
+        [Scroller setContentSize:CGSizeMake(320, 858)];
+        [Scroller_iPad setScrollEnabled:YES];
+        [Scroller_iPad setContentSize:CGSizeMake(540, 858)];
+    }else{
+        UIAlertView *alertHAN = [[UIAlertView alloc] initWithTitle:@"Información"
+                                                           message:@"No hay horarios descargados."
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"Cerrar"
+                                                 otherButtonTitles:nil];
+        [alertHAN show];
+    }
 }
 
 //FUNCION: didReceiveMemoryWarning (Se activa por aviso de sobrecarga de memoria)
