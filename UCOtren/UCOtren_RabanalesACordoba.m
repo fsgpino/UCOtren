@@ -25,6 +25,8 @@
 @synthesize horaProximaSalidaRabanalesACordoba;
 @synthesize SombraProximaSalidaRabanalesACordoba;
 @synthesize FechaActualizacion;
+@synthesize bacercade;
+@synthesize bhorario;
 
 //Se relacionan las variables globales con el entorno actual (enteros)
 @synthesize segundosSalida;
@@ -41,14 +43,11 @@
     //Arranque por defecto de la función viewDidLoad
     [super viewDidLoad];
     //Se realiza la configuración adicional después de cargar la vista
-    
-    //Declaración del puntero cadena (Contiene el modelo de dispositivo)
-    NSString *deviceType = [UIDevice currentDevice].model;
-    
+
     //Establece las fuentes
     NSLog(@" * Estableciendo fuentes (Rabanales a Córdoba)...");
     
-    if([deviceType isEqualToString:@"iPhone"]) {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //Tamaño de fuentes en caso de ser un iPhone
         horaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:75];
         SombraSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:75];
@@ -59,7 +58,7 @@
         horaProximaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:50];
         SombraProximaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:50];
     }
-    else if([deviceType isEqualToString:@"iPad"]) {
+    else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         //Tamaño de fuentes en caso de ser un iPad
         horaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:180];
         SombraSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:180];
@@ -70,20 +69,12 @@
         horaProximaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:120];
         SombraProximaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:120];
     }
-    else {
-        //Tamaño de fuentes en caso de ser un iPod touch, simuladores u otros
-        horaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:75];
-        SombraSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:75];
-        HorasRestantesSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:75];
-        SombraHorasRestantesSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:75];
-        MinutosRestantesSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:75];
-        SombraMinutosRestantesSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:75];
-        horaProximaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:50];
-        SombraProximaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:50];
+
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0f) {
+        [bacercade setImage:[UIImage imageNamed:@"TabBarImage-InfoA.png"]];
+        [bhorario setImage:[UIImage imageNamed:@"TabBarImage-HorariosA.png"]];
     }
-    
-    
-    
+
     //Se establece el alternador y errorMemoria a 0
     alternador = 0;
     errorMemoria = 0;
@@ -93,43 +84,17 @@
 
 - (void)inicioDelView
 {
-    //Declaración del puntero NSTimer (Contendra la dirección del contador)
-    NSTimer *ContadorDeTiempo;
-    
-    //*********** VERIFICA SI EXISTE HORARIO, SINO LOS DESCARGA ************
-    //
-    //Declaración de los directorios de trabajo donde se almacenan los horarios
-    NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
-    NSString *fileName = [NSString stringWithFormat:@"tramo-rabanales-cordoba.plist"];
-    NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
-    //
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
-    {
-        NSArray *dataFile = [[NSArray alloc] initWithContentsOfFile:filePath];
-        if (![[dataFile objectAtIndex:5]isEqual:@"null"])
-        {
-            UIAlertView *alertM = [[UIAlertView alloc] initWithTitle:@"Información"
-                                                             message:[dataFile objectAtIndex:5]
-                                                            delegate:nil
-                                                   cancelButtonTitle:@"Cerrar"
-                                                   otherButtonTitles:nil];
-            [alertM show];
-        }
-    }
     //Arranca la función encargada del reloj antes de esperar el primer segundo
     NSLog(@" !* Arrancando la función relojEnCurso (Rabanales a Córdoba) por primera vez\n");
     [self relojEnCurso:nil];
-        
+
     //Arranca la funcion encargada del reloj ejecutandose cada segundo, esperando un primer segundo
     NSLog(@" !* Arrancando la función relojEnCurso (Rabanales a Córdoba) con el temporizador\n");
-    ContadorDeTiempo = [NSTimer scheduledTimerWithTimeInterval:1
-                                                        target:self
-                                                      selector:@selector(relojEnCurso:)
-                                                      userInfo:nil
-                                                       repeats:YES];
-    //
-    //******* FIN DE VERIFICA SI EXISTE HORARIO, SINO LOS DESCARGA *********
+    [NSTimer scheduledTimerWithTimeInterval:1
+                                     target:self
+                                   selector:@selector(relojEnCurso:)
+                                   userInfo:nil
+                                    repeats:YES];
 }
 
 //FUNCION: didReceiveMemoryWarning (Se activa por aviso de sobrecarga de memoria)
@@ -148,96 +113,74 @@
 -(IBAction)informacion:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Acerca de"
                                                     message:@"Idea original: Gonzalo Toledano\nAutor: Francisco Gómez Pino\nE-Mail: i12gopif@uco.es\nTwitter: @fsgpino"
-                                                   delegate:nil
+                                                   delegate:self
                                           cancelButtonTitle:@"Cerrar"
-                                          otherButtonTitles:nil];
+                                          otherButtonTitles:@"Actualizar horarios",nil];
     [alert show];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != 0) {
+        [self recargarHorario:0];
+    }
+}
+
 -(IBAction)recargarHorario:(id)sender {
-    //Muestra la alerta que indica que se procede a descargar un horario
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Descargando horario\nPor favor, espere…" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
-    [alert show];
-    //
-    //Muestra un Indicador de proceso en curso dentro de la alerta anterior
-    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    //
-    //Ajusta la posición del inicador dentro de la alerta
-    indicator.center = CGPointMake(alert.bounds.size.width / 2, alert.bounds.size.height - 50);
-    //
-    //Se procede a iniciar la animación y se ajusta el indicador dentro de view correspondiente al alert
-    [indicator startAnimating];
-    [alert addSubview:indicator];
     
-    NSInteger statusCR = [self actualizaHorario:@"cordoba-rabanales"];
-    NSInteger statusRC = [self actualizaHorario:@"rabanales-cordoba"];
-    
-    //Se detiene el indicador y se retira la alerta de la pantalla
-    //[indicator stopAnimating];
-    [alert dismissWithClickedButtonIndex:0 animated:YES];
-    
-    if ((statusCR==2)&&(statusRC==2))
+    NSInteger status = [self actualizaHorario];
+    NSString *MStatus = nil;
+
+    if (status==0)
     {
-        UIAlertView *alertHAN = [[UIAlertView alloc] initWithTitle:@"Información"
-                                                           message:@"No hay actualizaciones disponibles."
-                                                          delegate:nil
-                                                 cancelButtonTitle:@"Cerrar"
-                                                 otherButtonTitles:nil];
-        [alertHAN show];
+        MStatus = [NSString stringWithFormat:@"Actualización realizada"];
+    }else if (status==1)
+    {
+        MStatus = [NSString stringWithFormat:@"No hay actualizaciones disponibles"];
+    }else if (status==2)
+    {
+        MStatus = [NSString stringWithFormat:@"¡Actualización de UCOtren disponible! Actualiza la aplicación para poder realizar actualizaciones de horarios"];
+    }else if (status==3)
+    {
+        MStatus = [NSString stringWithFormat:@"¡Error de consulta! Nuestros tecnicos lo resolveran lo antes posible"];
+    }else if (status==4)
+    {
+        MStatus = [NSString stringWithFormat:@"¡Servidor de horarios en mantenimiento! Por favor, intente realizar la actualización más tarde"];
+    }else if (status==5)
+    {
+        MStatus = [NSString stringWithFormat:@"¡Error de parametros! Nuestros tecnicos lo resolveran lo antes posible"];
     }else{
-        if ((statusCR==1)&&(statusRC==1))
-        {
-            UIAlertView *alertHA = [[UIAlertView alloc] initWithTitle:@"Información"
-                                                              message:@"Actualización realizada."
-                                                             delegate:nil
-                                                    cancelButtonTitle:@"Cerrar"
-                                                    otherButtonTitles:nil];
-            [alertHA show];
-        }else{
-            UIAlertView *alertNC = [[UIAlertView alloc] initWithTitle:@"Información"
-                                                              message:@"Imposible descargar los horarios del servidor, revise su conexión a internet."
-                                                             delegate:nil
-                                                    cancelButtonTitle:@"Cerrar"
-                                                    otherButtonTitles:nil];
-            [alertNC show];
-        }
+        MStatus = [NSString stringWithFormat:@"¡No hay conexión a internet! Revisa tu conexión y vuelve a intentarlo"];
     }
-    
-    //Declaración de los directorios de trabajo donde se almacenan los horarios
-    NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
-    NSString *fileNameT1 = [NSString stringWithFormat:@"tramo-rabanales-cordoba.plist"];
-    NSString *filePathT1 = [documentDirectory stringByAppendingPathComponent:fileNameT1];
-    NSString *fileNameT2 = [NSString stringWithFormat:@"tramo-cordoba-rabanales.plist"];
-    NSString *filePathT2 = [documentDirectory stringByAppendingPathComponent:fileNameT2];
-    //
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePathT1])
+
+    if(status==0)
     {
-        NSArray *dataFileT1 = [[NSArray alloc] initWithContentsOfFile:filePathT1];
-        if (![[dataFileT1 objectAtIndex:5]isEqual:@"null"])
+        //Declaración de los directorios de trabajo donde se almacena el mensaje
+        NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
+        NSString *fileName = [NSString stringWithFormat:@"mensaje.txt"];
+        NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
+        //
+        if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
         {
-            UIAlertView *alertM = [[UIAlertView alloc] initWithTitle:@"Información"
-                                                             message:[dataFileT1 objectAtIndex:5]
-                                                            delegate:nil
-                                                   cancelButtonTitle:@"Cerrar"
-                                                   otherButtonTitles:nil];
-            [alertM show];
+            NSString *dataFile = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+            if (![dataFile isEqual:@"n/a"])
+            {
+                UIAlertView *alertM = [[UIAlertView alloc] initWithTitle:@"Mensaje del servidor"
+                                                                 message:dataFile
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"Cerrar"
+                                                       otherButtonTitles:nil];
+                [alertM show];
+            }
         }
     }
-    //
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePathT2])
-    {
-        NSArray *dataFileT2 = [[NSArray alloc] initWithContentsOfFile:filePathT2];
-        if (![[dataFileT2 objectAtIndex:5]isEqual:@"null"])
-        {
-            UIAlertView *alertM = [[UIAlertView alloc] initWithTitle:@"Información"
-                                                             message:[dataFileT2 objectAtIndex:5]
-                                                            delegate:nil
-                                                   cancelButtonTitle:@"Cerrar"
-                                                   otherButtonTitles:nil];
-            [alertM show];
-        }
-    }
+
+    UIAlertView *alertD = [[UIAlertView alloc] initWithTitle:@"Información"
+                                                     message:MStatus
+                                                    delegate:nil
+                                           cancelButtonTitle:@"Cerrar"
+                                           otherButtonTitles:nil];
+    [alertD show];
 }
 
 
@@ -247,7 +190,7 @@
     //Declaración de los directorios de trabajo donde se almacenan los horarios
     NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
-    NSString *fileName = [NSString stringWithFormat:@"tramo-rabanales-cordoba.plist"];
+    NSString *fileName = [NSString stringWithFormat:@"tramo-RC.plist"];
     NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
@@ -255,7 +198,7 @@
     
         //Declaración del horario de cada una de las salidas, el ultimo valor del vector y de un contador auxiliar que se usa en la función
         NSArray *dataFile = [[NSArray alloc] initWithContentsOfFile:filePath];
-        NSArray* horario = [[dataFile objectAtIndex:4] componentsSeparatedByString: @"|"];
+        NSArray* horario = [[dataFile objectAtIndex:3] componentsSeparatedByString: @"|"];
     
         if ([horario count] > 0)
         {
@@ -316,7 +259,7 @@
     
             //Se llama a una función encargada de mostrar los resultados por pantalla
             [self actualizarDatosEnPantalla];
-            self.FechaActualizacion.text = [NSString stringWithFormat:@"Última actualización: %@",[dataFile objectAtIndex:3]];
+            self.FechaActualizacion.text = [NSString stringWithFormat:@"Última actualización: %@",[dataFile objectAtIndex:2]];
         }else{
             [timer invalidate];
         }
@@ -357,37 +300,58 @@
     return ((Horas*3600)+(Minutos*60));
 }
 
-//FUNCION: actualizaHorario (Actualiza el horarios almacenados en ficheros plist conectandose a la API de UCOmove)
-- (NSInteger)actualizaHorario: (NSString *) tramo
+//FUNCION: actualizaHorario (Actualiza el horarios almacenados en ficheros conectandose a la API de UCOmove)
+- (NSInteger)actualizaHorario
 {
-    // Actualiza el horarios almacenados en ficheros plist conectandose a la API de UCOmove
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                                                                                                          //
+    //                      FUNCIÓN DE ACTUALIZACIÓN DE HORARIOS CON UCOAPI 1.2 - Por Francisco Gómez Pino                      //
+    //                                                                                                                          //
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                                                                                                          //
+    //  - VERSIÓN PARA: UCOTREN 1.6                                                                                             //
+    //                                                                                                                          //
+    //  - SALIDAS DE LA FUNCIÓN:                                                                                                //
+    //      - return 0: Actualización realizada con exito.                                                                      //
+    //      - return 1: No hay actualizaciones disponibles.                                                                     //
+    //      - return 2: El servidor no autoriza la aplicación.                                                                  //
+    //      - return 3: Consulta realizada incorrectamente.                                                                     //
+    //      - return 4: Servidor desconectado o en mantenimiento.                                                               //
+    //      - return 5: Parametros incompletos u otros posibles errores.                                                        //
+    //      - return 6: Imposible establecer conexión con el servidor (Terminal sin acceso a la red).                           //
+    //                                                                                                                          //
+    //  - PARAMETROS DE CONFIGURACIÓN:                                                                                          //
+    //                                                                                                                          //
+        NSString *pApp          = [NSString stringWithFormat:@"UCOtren"];                       // Nombre de la aplicación      //
+        NSString *pVersion      = [NSString stringWithFormat:@"1.6"];                           // Versión de la aplicación     //
+        NSString *pBuild        = [NSString stringWithFormat:@"10615"];                         // Build de la aplicación       //
+        NSString *pPlataform    = [NSString stringWithFormat:@"ios"];                           // Plataforma de la aplicación  //
+        NSString *pTipoH        = [NSString stringWithFormat:@"tren"];                          // Tipo de horario a pedir      //
+        NSString *pTramos       = [NSString stringWithFormat:@"cordoba-rabanales;rabanales-cordoba"]; // Horarios a pedir       //
+        NSString *pFormatH      = [NSString stringWithFormat:@"1"];                             // Formato de horario a pedir   //
+    //                                                                                                                          //
+    //  - PARAMETROS DE CONEXÍON (URL de descarga):                                                                             //
+    //                                                                                                                          //
+        NSString *URLdownload = [NSString stringWithFormat:@"http://your.server/your/api/endpoint.php?app=%@&vapp=%@&bapp=%@&plataforma=%@&tipo=%@&tramos=%@&fhorario=%@", pApp, pVersion, pBuild, pPlataform, pTipoH, pTramos, pFormatH]; // Change me / Cambialo
+    //                                                                                                                          //
+    //  - PARAMETROS DE ALMACENAMIENTO:                                                                                         //
+    //                                                                                                                          //
+        NSString *fileNameCR = [NSString stringWithFormat:@"tramo-CR.plist"];   // Nombre el horario Cordoba-Rabanales          //
+        NSString *fileNameRC = [NSString stringWithFormat:@"tramo-RC.plist"];   // Nombre el horario Rabanales-Cordoba          //
+        NSString *fileNameMS = [NSString stringWithFormat:@"mensaje.txt"];      // Nombre para el mensaje                       //
+    //                                                                                                                          //
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //
-    //Declaración de los directorios de trabajo donde se almacenan los horarios
+    //Declaración de los directorios de trabajo donde se almacenan los horarios CR y RC y el mensaje
     NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
-    NSString *fileName = [NSString stringWithFormat:@"tramo-%@.plist", tramo];
-    NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
+    NSString *filePathCR = [documentDirectory stringByAppendingPathComponent:fileNameCR];
+    NSString *filePathRC = [documentDirectory stringByAppendingPathComponent:fileNameRC];
+    NSString *filePathMS = [documentDirectory stringByAppendingPathComponent:fileNameMS];
     //
-    //************************* ALERTA DE INICIO DE DESCARGA *************************
-    //
-    //Muestra la alerta que indica que se procede a descargar un horario
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Descargando horario\nPor favor, espere…" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
-    [alert show];
-    //
-    //Muestra un Indicador de proceso en curso dentro de la alerta anterior
-    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    //
-    //Ajusta la posición del inicador dentro de la alerta
-    indicator.center = CGPointMake(alert.bounds.size.width / 2, alert.bounds.size.height - 50);
-    //
-    //Se procede a iniciar la animación y se ajusta el indicador dentro de view correspondiente al alert
-    [indicator startAnimating];
-    [alert addSubview:indicator];
-    //
-    //******************** SE PROCEDE A LA DESCARGA DEL HORARIO **********************
+    //******************** SE PROCEDE A LA DESCARGA DE LOS HORARIOS **********************
     //
     NSError *error = nil;
-    NSString *URLdownload = [NSString stringWithFormat:@"http://your.server/your/api/endpoint.php?plataforma=ios&tipo=tren&tramo=%@", tramo]; // Change me / Cambialo
     NSString *response=[NSString stringWithContentsOfURL:[NSURL URLWithString:URLdownload] encoding:NSUTF8StringEncoding error:&error];
     //
     //Se comprueba si se recibe respuesta del servidor
@@ -407,98 +371,165 @@
             {
                 //*********** EL SERVIDOR REALIZO CON EXITO LA CONSULTA **************
                 //
+                // Se define una bandera para comprobar si algo se actualiza
+                int banderaActualizacion=0;
+                //
+                //// - INICIANDO COMPROBACIÓN DE HORARIO CR
+                //
+                // Se obtiene el horario de la descarga
+                NSArray *dataDownloadCR = [[dataDownload objectAtIndex:2] componentsSeparatedByString:@"$$"];
+                //
                 //Se comprueba si el archivo ya existe
-                if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+                if ([[NSFileManager defaultManager] fileExistsAtPath:filePathCR])
                 {
-                    //** EN CASO DE QUE EL ARCHIVO EXISTA SE COMPRUEBAN LAS FECHAS ***
-                    NSArray *dataFile = [[NSArray alloc] initWithContentsOfFile:filePath];
+                    // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
+                    NSArray *dataFileCR = [[NSArray alloc] initWithContentsOfFile:filePathCR];
                     //
-                    //Se comprueban si las fechas son iguales
-                    if([[dataDownload objectAtIndex:3]isEqual:[dataFile objectAtIndex:3]])
+                    //Se comprueban si los codigos y fechas son iguales
+                    if(([[dataDownloadCR objectAtIndex:0]isEqual:[dataFileCR objectAtIndex:0]])&&([[dataDownloadCR objectAtIndex:2]isEqual:[dataFileCR objectAtIndex:2]]))
                     {
                         //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
                         //
-                        //Se detiene el indicador y se retira la alerta de la pantalla
-                        [indicator stopAnimating];
-                        [alert dismissWithClickedButtonIndex:0 animated:YES];
-                        //
-                        NSLog(@"Descarga del horario %@ completada, no actualizado.", tramo);
-                        //
-                        //Se devuelve 2 indicando que la descarga es la misma que la actual
-                        return 2;
+                        NSLog(@" #FAHorario: Horario CR no actualizado\n");
                     }else{
                         //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
                         //
                         //Se elimina el contenido actual del archivo
-                        [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+                        [[NSFileManager defaultManager] removeItemAtPath:filePathCR error:nil];
                         //
                         //Se crea un nuevo archivo con los datos nuevos
-                        [dataDownload writeToFile:filePath atomically:YES];
+                        [dataDownloadCR writeToFile:filePathCR atomically:YES];
                         //
-                        //Se detiene el indicador y se retira la alerta de la pantalla
-                        [indicator stopAnimating];
-                        [alert dismissWithClickedButtonIndex:0 animated:YES];
+                        NSLog(@" #FAHorario: Horario CR actualizado\n");
                         //
-                        NSLog(@"Descarga del horario %@ completada, actualizado", tramo);
-                        //
-                        //Se devuelve 1 indicando que la descarga se ha realizado
-                        return 1;
+                        banderaActualizacion = 1; // Se considera como actualizado
                     }
                 }else{
                     //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
-                    [dataDownload writeToFile:filePath atomically:YES];
+                    [dataDownloadCR writeToFile:filePathCR atomically:YES];
                     //
-                    //Se detiene el indicador y se retira la alerta de la pantalla
-                    [indicator stopAnimating];
-                    [alert dismissWithClickedButtonIndex:0 animated:YES];
+                    NSLog(@" #FAHorario: Horario CR creado\n");
                     //
-                    NSLog(@"Descarga del horario %@ completada, actualizado.", tramo);
+                    banderaActualizacion = 1; // Se considera como actualizado
+                }
+                //
+                //// - INICIANDO COMPROBACIÓN DE HORARIO RC
+                //
+                // Se obtiene el horario de la descarga
+                NSArray *dataDownloadRC = [[dataDownload objectAtIndex:3] componentsSeparatedByString:@"$$"];
+                //
+                //Se comprueba si el archivo ya existe
+                if ([[NSFileManager defaultManager] fileExistsAtPath:filePathRC])
+                {
+                    // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
+                    NSArray *dataFileRC = [[NSArray alloc] initWithContentsOfFile:filePathRC];
                     //
-                    //Se devuelve 1 indicando que la descarga se ha realizado
-                    return 1;
+                    //Se comprueban si los codigos y fechas son iguales
+                    if(([[dataDownloadRC objectAtIndex:0]isEqual:[dataFileRC objectAtIndex:0]])&&([[dataDownloadRC objectAtIndex:2]isEqual:[dataFileRC objectAtIndex:2]]))
+                    {
+                        //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
+                        //
+                        NSLog(@" #FAHorario: Horario RC no actualizado\n");
+                    }else{
+                        //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
+                        //
+                        //Se elimina el contenido actual del archivo
+                        [[NSFileManager defaultManager] removeItemAtPath:filePathRC error:nil];
+                        //
+                        //Se crea un nuevo archivo con los datos nuevos
+                        [dataDownloadRC writeToFile:filePathRC atomically:YES];
+                        //
+                        NSLog(@" #FAHorario: Horario RC actualizado\n");
+                        //
+                        banderaActualizacion = 1; // Se considera como actualizado
+                    }
+                }else{
+                    //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
+                    [dataDownloadRC writeToFile:filePathRC atomically:YES];
+                    //
+                    NSLog(@" #FAHorario: Horario RC creado\n");
+                    //
+                    banderaActualizacion = 1; // Se considera como actualizado
+                }
+                //
+                //// - INICIANDO COMPROBACIÓN DEL MENSAJE
+                //
+                NSString *downloadMS = [dataDownload objectAtIndex:4];
+                //
+                //Se comprueba si el archivo ya existe
+                if ([[NSFileManager defaultManager] fileExistsAtPath:filePathMS])
+                {
+                    // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
+                    NSString *dataFileMS = [NSString stringWithContentsOfFile:filePathMS encoding:NSUTF8StringEncoding error:nil];
+                    //
+                    //Se comprueba si los mensajes son iguales
+                    if([downloadMS isEqual:dataFileMS])
+                    {
+                        //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
+                        //
+                        NSLog(@" #FAHorario: Mensaje no actualizado\n");
+                    }else{
+                        //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
+                        //
+                        //Se elimina el contenido actual del archivo
+                        [[NSFileManager defaultManager] removeItemAtPath:filePathMS error:nil];
+                        //
+                        //Se crea un nuevo archivo con los datos nuevos
+                        [downloadMS writeToFile:filePathMS atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                        //
+                        NSLog(@" #FAHorario: Mensaje actualizado\n");
+                    }
+                }else{
+                    //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
+                    [downloadMS writeToFile:filePathMS atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                    //
+                    NSLog(@" #FAHorario: Mensaje creado\n");
+                }
+                //
+                // Se verifica la bandera, 1 se a actualizado, 0 no
+                if(banderaActualizacion==1)
+                {
+                    return 0; // Se devuelve 0, puesto que se ha realizado al menos una actualización
+                }else{
+                    return 1; // Se devuelve 1, puesto que no se ha realizado ninguna actualización
                 }
             }else{
                 //********** EL SERVIDOR NO REALIZO CON EXITO LA CONSULTA ************
                 //
-                //Se detiene el indicador y se retira la alerta de la pantalla
-                [indicator stopAnimating];
-                [alert dismissWithClickedButtonIndex:0 animated:YES];
-                //
-                NSLog(@"#ERROR#: Servidor apagado, no acepta conexiones.");
-                //
-                //Se devuelve 0 indicando que la descarga no a sido posible
-                return 0;
+                //Se observa si el fallo de consulta falllida o por aplicación no permitida
+                if ([[dataDownload objectAtIndex:1]isEqual:@"Fail"])
+                {
+                    NSLog(@" #FAHorario: Error -> Consulta fallida\n");
+                    //
+                    return 3; // Se devuelve 3, puesto que la consulta se a realizado de forma incorrecta
+                }else{
+                    NSLog(@" #FAHorario: Aplicación denegada por el servidor\n");
+                    //
+                    return 2; // Se devuelve 2, puesto que el servidor no permite la descarga a esta versión
+                }
             }
         }else{
             //***************** EL SERVIDOR NO ACEPTA LA CONSULTA ********************
             //
-            //Se detiene el indicador y se retira la alerta de la pantalla
-            [indicator stopAnimating];
-            [alert dismissWithClickedButtonIndex:0 animated:YES];
-            //
             //Se observa si el fallo de no aceptar la consulta es por desconeción o otra cosa
             if ([[dataDownload objectAtIndex:0]isEqual:@"Off"])
             {
-                NSLog(@"#ERROR#: Servidor apagado, no acepta conexiones.");
+                NSLog(@" #FAHorario: Error -> Servidor offline\n");
+                //
+                return 4; // Se devuelve 4, puesto que el servidor se encuentra desconectado
             }else{
-                NSLog(@"%@",[dataDownload objectAtIndex:0]);
+                NSLog(@" #FAHorario: %@\n",[dataDownload objectAtIndex:0]);
+                //
+                return 5; // Se devuelve 5, puesto que el servidor a devuelto algun error de parametros
             }
-            //
-            //Se devuelve 0 indicando que la descarga no a sido posible
-            return 0;
         }
     }else{
         //******************* NO SE RECIBE RESPUESTA DEL SERVIDOR ********************
         //
-        //Se detiene el indicador y se retira la alerta de la pantalla
-        [indicator stopAnimating];
-        [alert dismissWithClickedButtonIndex:0 animated:YES];
-        //
         //Se manda al log el error de la descarga
-        NSLog(@"#Error#: Imposible descargar horario del servidor\n###############################\n%@\n###############################\n", error);
+        NSLog(@" #FAHorario: Error -> Imposible realizar la conexión\n%@\n", error);
         //
-        //Se devuelve 0 indicando que la descarga no a sido posible
-        return 0;
+        return 6; // Se devuelve 6, puesto que es imposible establecer la conexión
     }
 }
 

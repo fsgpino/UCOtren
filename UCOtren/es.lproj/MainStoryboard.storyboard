@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vkj-Jr-Y5i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vkj-Jr-Y5i">
     <dependencies>
-        <deployment version="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment version="1280" defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Rabanales-->
         <scene sceneID="oMt-6t-LkS">
             <objects>
-                <navigationController definesPresentationContext="YES" id="rLX-bA-x5l" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="rLX-bA-x5l" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Rabanales" image="TabBarImage-UCO.png" id="KaO-pq-1hm"/>
                     <navigationItem key="navigationItem" id="3YI-YF-GO1"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="8IM-zE-CjM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="8IM-zE-CjM">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -31,158 +31,142 @@
         <!--Otren RabanalesA Cordoba - UCOtren_RabanalesACordoba-->
         <scene sceneID="VZ3-Cb-J8c">
             <objects>
-                <viewController title="UCOtren_RabanalesACordoba" modalTransitionStyle="flipHorizontal" id="Ypj-uu-GYP" customClass="UCOtren_RabanalesACordoba" sceneMemberID="viewController">
+                <viewController title="UCOtren_RabanalesACordoba" wantsFullScreenLayout="YES" modalTransitionStyle="flipHorizontal" id="Ypj-uu-GYP" customClass="UCOtren_RabanalesACordoba" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="tY7-DB-2db">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gxw-uw-i9q">
-                                <rect key="frame" x="-10" y="108" width="341" height="21"/>
+                                <rect key="frame" x="-10" y="173" width="341" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D1t-Rk-h6g">
-                                <rect key="frame" x="-10" y="314" width="341" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GOl-2q-xa8">
-                                <rect key="frame" x="-10" y="236" width="341" height="21"/>
+                                <rect key="frame" x="-10" y="301" width="341" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Salida Inmediata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ghY-mr-hnU">
-                                <rect key="frame" x="0.0" y="1" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Próxima  Salida" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rqb-WS-GC0">
-                                <rect key="frame" x="0.0" y="267" width="157" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tiempo Restante" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="434-CO-IP4">
-                                <rect key="frame" x="0.0" y="128" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="193" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KBG-hU-PRZ">
-                                <rect key="frame" x="0.0" y="36" width="320" height="78"/>
+                                <rect key="frame" x="0.0" y="107" width="320" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
-                                <color key="textColor" white="0.27000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.17000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R4e-lC-gIF">
-                                <rect key="frame" x="0.0" y="36" width="320" height="78"/>
+                                <rect key="frame" x="0.0" y="107" width="320" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
                                 <color key="textColor" red="0.0" green="0.96464839339999997" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K25-Qy-syE">
-                                <rect key="frame" x="165" y="263" width="155" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
-                                <color key="textColor" white="0.26817666330000001" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4yS-jp-59N">
-                                <rect key="frame" x="165" y="263" width="155" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RmK-Xf-VZV">
-                                <rect key="frame" x="0.0" y="162" width="118" height="78"/>
+                                <rect key="frame" x="0.0" y="233" width="118" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
-                                <color key="textColor" white="0.2677671371" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.17000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cQ2-sg-wVL">
-                                <rect key="frame" x="0.0" y="162" width="118" height="78"/>
+                                <rect key="frame" x="0.0" y="233" width="118" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pdw-YF-JWL">
-                                <rect key="frame" x="151" y="162" width="84" height="78"/>
+                                <rect key="frame" x="151" y="233" width="84" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
-                                <color key="textColor" white="0.27368951609999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.17000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VlQ-3j-lS9">
-                                <rect key="frame" x="151" y="162" width="84" height="78"/>
+                                <rect key="frame" x="151" y="233" width="84" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="H" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WJJ-QM-Zkt">
-                                <rect key="frame" x="126" y="213" width="17" height="21"/>
+                                <rect key="frame" x="126" y="278" width="17" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hZh-oP-pfE">
-                                <rect key="frame" x="243" y="213" width="77" height="21"/>
+                                <rect key="frame" x="243" y="278" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Última actualización: 0000-00-00 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e27-Oi-hdb">
-                                <rect key="frame" x="35" y="330" width="277" height="37"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fl2-a9-a1a">
+                                <rect key="frame" x="-10" y="389" width="341" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Próxima Salida" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Dy-4z-WnQ">
+                                <rect key="frame" x="0.0" y="324" width="320" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aos-qd-J32">
+                                <rect key="frame" x="83" y="353" width="155" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
+                                <color key="textColor" white="0.17000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VNn-LK-rQk">
+                                <rect key="frame" x="83" y="353" width="155" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Última actualización: 0000-00-00 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kZx-hd-smG">
+                                <rect key="frame" x="0.0" y="411" width="320" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="huX-GC-oqb">
-                                <rect key="frame" x="20" y="339" width="18" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="informacion:" destination="wKd-1q-VQi" eventType="touchDown" id="EjY-PG-suW"/>
-                                    <action selector="informacion:" destination="Ypj-uu-GYP" eventType="touchDown" id="oUG-5i-3O4"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="UCOtren" id="Xno-Mc-lY8">
                         <barButtonItem key="backBarButtonItem" title="Atras" id="pej-Dc-Z6s"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="OZa-nG-wuX">
+                        <barButtonItem key="leftBarButtonItem" image="TabBarImage-Info.png" id="OZa-nG-wuX">
                             <connections>
-                                <action selector="recargarHorario:" destination="Ypj-uu-GYP" id="iRD-Q8-2ac"/>
+                                <action selector="informacion:" destination="Ypj-uu-GYP" id="Ir1-ZJ-L9X"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="TabBarImage-Horarios.png" id="5Rc-1X-6hA">
@@ -191,20 +175,22 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="FechaActualizacion" destination="e27-Oi-hdb" id="yHd-uk-RzK"/>
+                        <outlet property="FechaActualizacion" destination="kZx-hd-smG" id="fsO-Ml-lOd"/>
                         <outlet property="HorasRestantesSalidaRabanalesACordoba" destination="cQ2-sg-wVL" id="p1Z-EB-t6M"/>
                         <outlet property="MinutosRestantesSalidaRabanalesACordoba" destination="VlQ-3j-lS9" id="ASm-Ay-ark"/>
                         <outlet property="SombraHorasRestantesSalidaRabanalesACordoba" destination="RmK-Xf-VZV" id="6q8-rB-dHV"/>
                         <outlet property="SombraMinutosRestantesSalidaRabanalesACordoba" destination="pdw-YF-JWL" id="grJ-p1-bbC"/>
-                        <outlet property="SombraProximaSalidaRabanalesACordoba" destination="K25-Qy-syE" id="jFI-Oc-AkS"/>
+                        <outlet property="SombraProximaSalidaRabanalesACordoba" destination="aos-qd-J32" id="AkE-GY-FHk"/>
                         <outlet property="SombraSalidaRabanalesACordoba" destination="KBG-hU-PRZ" id="Hbd-bO-mQp"/>
-                        <outlet property="horaProximaSalidaRabanalesACordoba" destination="4yS-jp-59N" id="5bc-mX-0nm"/>
+                        <outlet property="bacercade" destination="OZa-nG-wuX" id="bNg-6B-Mn1"/>
+                        <outlet property="bhorario" destination="5Rc-1X-6hA" id="73O-oj-tfQ"/>
+                        <outlet property="horaProximaSalidaRabanalesACordoba" destination="VNn-LK-rQk" id="iEs-oK-jqP"/>
                         <outlet property="horaSalidaRabanalesACordoba" destination="R4e-lC-gIF" id="ojN-vA-Owj"/>
                     </connections>
                 </viewController>
@@ -215,16 +201,16 @@
         <!--Otren Horarios-->
         <scene sceneID="r0N-ET-Ln4">
             <objects>
-                <viewController id="AaZ-pJ-rmv" customClass="UCOtren_Horarios" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="AaZ-pJ-rmv" customClass="UCOtren_Horarios" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="axz-cl-h2A">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
                             <userLayoutGuide location="160" affinity="minX"/>
                         </userGuides>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="94w-W6-6bC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <navigationBar contentMode="scaleToFill" id="94w-W6-6bC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Horarios" id="vWb-hi-pwH">
@@ -237,10 +223,10 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" id="D6S-So-Iys">
-                                <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AQW-9U-Aj3">
+                                    <tableView clipsSubviews="YES" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AQW-9U-Aj3">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="858"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -249,15 +235,14 @@
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellCordobaARabanales" id="llI-C0-8sH">
                                                 <rect key="frame" x="0.0" y="22" width="160" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="llI-C0-8sH" id="Te7-gc-Sl3">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
+                                                </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <tableView clipsSubviews="YES" tag="1" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CnS-Lm-5GT">
+                                    <tableView clipsSubviews="YES" tag="1" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CnS-Lm-5GT">
                                         <rect key="frame" x="160" y="0.0" width="160" height="858"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -266,11 +251,10 @@
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellRabanalesACordoba" id="Rgu-cR-ggx">
                                                 <rect key="frame" x="0.0" y="22" width="160" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rgu-cR-ggx" id="hDt-Tj-1bo">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
+                                                </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
                                         <sections/>
@@ -278,10 +262,10 @@
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -299,157 +283,142 @@
         <!--Otren CordobaA Rabanales - UCOtren_CordobaARabanales-->
         <scene sceneID="8bJ-XV-RgP">
             <objects>
-                <viewController title="UCOtren_CordobaARabanales" id="wKd-1q-VQi" customClass="UCOtren_CordobaARabanales" sceneMemberID="viewController">
+                <viewController title="UCOtren_CordobaARabanales" wantsFullScreenLayout="YES" id="wKd-1q-VQi" customClass="UCOtren_CordobaARabanales" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zvn-NX-Pfz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ue-kp-y9E">
-                                <rect key="frame" x="-10" y="108" width="341" height="21"/>
+                                <rect key="frame" x="-10" y="173" width="341" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KmH-S9-Ufz">
-                                <rect key="frame" x="-10" y="314" width="341" height="21"/>
+                                <rect key="frame" x="-10" y="389" width="341" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zBa-BI-H6K">
-                                <rect key="frame" x="-10" y="236" width="341" height="21"/>
+                                <rect key="frame" x="-10" y="301" width="341" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Salida Inmediata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JcT-sI-MZ9">
-                                <rect key="frame" x="0.0" y="1" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Próxima  Salida" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tnj-R7-pjr">
-                                <rect key="frame" x="0.0" y="267" width="157" height="54"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Próxima Salida" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tnj-R7-pjr">
+                                <rect key="frame" x="0.0" y="324" width="320" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tiempo Restante" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UwW-v2-q6i">
-                                <rect key="frame" x="0.0" y="128" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="193" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U2m-5F-nYD">
-                                <rect key="frame" x="0.0" y="36" width="320" height="78"/>
+                                <rect key="frame" x="0.0" y="107" width="320" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
-                                <color key="textColor" white="0.27000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.17000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cyy-Gb-Q07">
-                                <rect key="frame" x="0.0" y="36" width="320" height="78"/>
+                                <rect key="frame" x="0.0" y="107" width="320" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
                                 <color key="textColor" red="0.0" green="0.96464839339999997" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jek-dH-IZW">
-                                <rect key="frame" x="165" y="263" width="155" height="58"/>
+                                <rect key="frame" x="83" y="353" width="155" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
-                                <color key="textColor" white="0.26817666330000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.17000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wCY-r0-pPp">
-                                <rect key="frame" x="165" y="263" width="155" height="58"/>
+                                <rect key="frame" x="83" y="353" width="155" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vxM-RA-sjB">
-                                <rect key="frame" x="0.0" y="162" width="118" height="78"/>
+                                <rect key="frame" x="0.0" y="233" width="118" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
-                                <color key="textColor" white="0.2677671371" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.17000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WIu-1O-9CT">
-                                <rect key="frame" x="0.0" y="162" width="118" height="78"/>
+                                <rect key="frame" x="0.0" y="233" width="118" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="brU-60-5lX">
-                                <rect key="frame" x="151" y="162" width="84" height="78"/>
+                                <rect key="frame" x="151" y="233" width="84" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
-                                <color key="textColor" white="0.27368951609999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.17000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a79-mF-rYO">
-                                <rect key="frame" x="151" y="162" width="84" height="78"/>
+                                <rect key="frame" x="151" y="233" width="84" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="H" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9rX-Td-ymw">
-                                <rect key="frame" x="126" y="213" width="17" height="21"/>
+                                <rect key="frame" x="126" y="278" width="17" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Yz-UY-57b">
-                                <rect key="frame" x="243" y="213" width="77" height="21"/>
+                                <rect key="frame" x="243" y="278" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Última actualización: 0000-00-00 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hpz-vo-tnj">
-                                <rect key="frame" x="35" y="330" width="277" height="37"/>
+                                <rect key="frame" x="0.0" y="411" width="320" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="pmf-md-xz8">
-                                <rect key="frame" x="20" y="339" width="18" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="informacion:" destination="wKd-1q-VQi" eventType="touchDown" id="UY2-xt-POh"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="UCOtren" id="M93-mv-UMA">
                         <barButtonItem key="backBarButtonItem" title="Atras" id="2Ha-ZP-vCP"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="6Xv-Dz-56A">
+                        <barButtonItem key="leftBarButtonItem" image="TabBarImage-Info.png" id="6Xv-Dz-56A">
                             <connections>
-                                <action selector="recargarHorario:" destination="wKd-1q-VQi" id="Jd3-hJ-W4s"/>
+                                <action selector="informacion:" destination="wKd-1q-VQi" id="vmP-qU-4Rg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="TabBarImage-Horarios.png" id="zrn-6U-eOy">
@@ -458,9 +427,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -471,6 +440,8 @@
                         <outlet property="SombraMinutosRestantesSalidaCordobaARabanales" destination="brU-60-5lX" id="7Rv-Bs-klv"/>
                         <outlet property="SombraProximaSalidaCordobaARabanales" destination="jek-dH-IZW" id="3hm-ht-6qg"/>
                         <outlet property="SombraSalidaCordobaARabanales" destination="U2m-5F-nYD" id="JGi-eo-xMN"/>
+                        <outlet property="bacercade" destination="6Xv-Dz-56A" id="nSZ-rx-g7F"/>
+                        <outlet property="bhorario" destination="zrn-6U-eOy" id="yVe-uH-P9b"/>
                         <outlet property="horaProximaSalidaCordobaARabanales" destination="wCY-r0-pPp" id="XuR-2D-W8I"/>
                         <outlet property="horaSalidaCordobaARabanales" destination="cyy-Gb-Q07" id="XBi-W5-Nke"/>
                     </connections>
@@ -482,14 +453,14 @@
         <!--Tab Bar Controller - UCOtren_TabBat-->
         <scene sceneID="SBu-YM-jaj">
             <objects>
-                <tabBarController title="UCOtren_TabBat" definesPresentationContext="YES" id="vkj-Jr-Y5i" sceneMemberID="viewController">
+                <tabBarController title="UCOtren_TabBat" wantsFullScreenLayout="YES" definesPresentationContext="YES" id="vkj-Jr-Y5i" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="UCOtren" id="uoe-0q-KyO"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="DC5-Gu-Hfu">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="DC5-Gu-Hfu">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -506,15 +477,15 @@
         <!--Navigation Controller - Córdoba-->
         <scene sceneID="kuJ-a5-RGY">
             <objects>
-                <navigationController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="rwn-6P-86I" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="rwn-6P-86I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Córdoba" image="TabBarImage-Cordoba.png" id="L2q-I8-ijr"/>
                     <navigationItem key="navigationItem" id="eux-nX-4aq"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="Ln2-tS-Q2Y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Ln2-tS-Q2Y">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -533,59 +504,16 @@
     </scenes>
     <resources>
         <image name="TabBarImage-Cordoba.png" width="29" height="30"/>
-        <image name="TabBarImage-Horarios.png" width="20" height="20"/>
+        <image name="TabBarImage-Horarios.png" width="28" height="28"/>
+        <image name="TabBarImage-Info.png" width="28" height="28"/>
         <image name="TabBarImage-UCO.png" width="23" height="30"/>
     </resources>
-    <classes>
-        <class className="UCOtren_CordobaARabanales" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UCOtren_CordobaARabanales.h"/>
-            <relationships>
-                <relationship kind="action" name="informacion:"/>
-                <relationship kind="action" name="recargarHorario:"/>
-                <relationship kind="outlet" name="FechaActualizacion" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="HorasRestantesSalidaCordobaARabanales" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="MinutosRestantesSalidaCordobaARabanales" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="SombraHorasRestantesSalidaCordobaARabanales" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="SombraMinutosRestantesSalidaCordobaARabanales" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="SombraProximaSalidaCordobaARabanales" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="SombraSalidaCordobaARabanales" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="horaProximaSalidaCordobaARabanales" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="horaSalidaCordobaARabanales" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UCOtren_Horarios" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UCOtren_Horarios.h"/>
-            <relationships>
-                <relationship kind="action" name="volverAtras:"/>
-                <relationship kind="outlet" name="Scroller" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="Scroller_iPad" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="tablaSalidasCordobaARabanales" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="tablaSalidasRabanalesACordoba" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="UCOtren_RabanalesACordoba" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UCOtren_RabanalesACordoba.h"/>
-            <relationships>
-                <relationship kind="action" name="informacion:"/>
-                <relationship kind="action" name="recargarHorario:"/>
-                <relationship kind="outlet" name="FechaActualizacion" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="HorasRestantesSalidaRabanalesACordoba" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="MinutosRestantesSalidaRabanalesACordoba" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="SombraHorasRestantesSalidaRabanalesACordoba" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="SombraMinutosRestantesSalidaRabanalesACordoba" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="SombraProximaSalidaRabanalesACordoba" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="SombraSalidaRabanalesACordoba" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="horaProximaSalidaRabanalesACordoba" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="horaSalidaRabanalesACordoba" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jGu-Cx-qrW"/>
+        <segue reference="7RM-zj-NjN"/>
     </inferredMetricsTieBreakers>
 </document>

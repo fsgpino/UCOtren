@@ -22,12 +22,12 @@
     //Declaración de los directorios de trabajo donde se almacenan los horarios
     NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
-    NSString *fileName = [NSString stringWithFormat:@"tramo-rabanales-cordoba.plist"];
+    NSString *fileName = [NSString stringWithFormat:@"tramo-RC.plist"];
     NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
     
     //Declaración del horario de cada una de las salidas, el ultimo valor del vector y de un contador auxiliar que se usa en la función
     NSArray *dataFile = [[NSArray alloc] initWithContentsOfFile:filePath];
-    origenSalidasRabanalesACordoba = [[dataFile objectAtIndex:4] componentsSeparatedByString: @"|"];
+    origenSalidasRabanalesACordoba = [[dataFile objectAtIndex:3] componentsSeparatedByString: @"|"];
     
     //Declaración del horario de cada una de las salidas, el ultimo valor del vector y de un contador auxiliar que se usa en la función
     int ultimoValorHorario = ([origenSalidasRabanalesACordoba count] - 1);

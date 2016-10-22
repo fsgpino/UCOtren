@@ -30,9 +30,9 @@
     
     NSArray *pathOfDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [pathOfDirectory objectAtIndex:0];
-    NSString *fileNameCR = [NSString stringWithFormat:@"tramo-cordoba-rabanales.plist"];
+    NSString *fileNameCR = [NSString stringWithFormat:@"tramo-CR.plist"];
     NSString *filePathCR = [documentDirectory stringByAppendingPathComponent:fileNameCR];
-    NSString *fileNameRC = [NSString stringWithFormat:@"tramo-rabanales-cordoba.plist"];
+    NSString *fileNameRC = [NSString stringWithFormat:@"tramo-RC.plist"];
     NSString *filePathRC = [documentDirectory stringByAppendingPathComponent:fileNameRC];
     
     if (([[NSFileManager defaultManager] fileExistsAtPath:filePathRC])&&([[NSFileManager defaultManager] fileExistsAtPath:filePathCR]))
@@ -64,6 +64,15 @@
                                                  otherButtonTitles:nil];
         [alertHAN show];
     }
+}
+
+-(NSInteger) tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
+{
+	return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
 }
 
 //FUNCION: didReceiveMemoryWarning (Se activa por aviso de sobrecarga de memoria)

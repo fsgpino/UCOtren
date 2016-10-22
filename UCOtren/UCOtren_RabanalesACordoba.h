@@ -8,6 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <pthread.h>
 
 @interface UCOtren_RabanalesACordoba : UIViewController
 
@@ -20,6 +21,8 @@
 @property (nonatomic,strong) IBOutlet UILabel *horaProximaSalidaRabanalesACordoba;
 @property (nonatomic,strong) IBOutlet UILabel *SombraProximaSalidaRabanalesACordoba;
 @property (nonatomic,strong) IBOutlet UILabel *FechaActualizacion;
+@property (nonatomic,strong) IBOutlet UIBarButtonItem *bacercade;
+@property (nonatomic,strong) IBOutlet UIBarButtonItem *bhorario;
 
 @property (assign) int segundosSalida;
 @property (assign) int segundosRestantesSalida;
@@ -33,6 +36,6 @@
 - (void)relojEnCurso:(NSTimer *)timer;
 - (void)actualizarDatosEnPantalla;
 - (NSInteger) StringASegundos: (NSString *) hora;
-- (NSInteger) actualizaHorario: (NSString *) tramo;
+- (NSInteger) actualizaHorario;
 
 @end

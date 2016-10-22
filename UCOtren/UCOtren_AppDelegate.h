@@ -13,6 +13,4 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (NSInteger)actualizaHorario: (NSString *) tramo;
-
 @end
