@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="oer-s6-S2q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="oer-s6-S2q">
     <dependencies>
         <deployment version="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -10,6 +10,7 @@
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="cch-1N-V49" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Rabanales" image="TabBarImage-UCO.png" id="Hc4-e4-Iw9"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -186,6 +187,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -294,6 +296,7 @@
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="baU-47-vYV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Córdoba" image="TabBarImage-Cordoba.png" id="zq6-LZ-4f1"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -477,6 +480,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -502,6 +506,7 @@
         <scene sceneID="VQJ-Hc-4rM">
             <objects>
                 <tabBarController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="oer-s6-S2q" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>

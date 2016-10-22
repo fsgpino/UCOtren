@@ -323,8 +323,8 @@
     //  - PARAMETROS DE CONFIGURACIÓN:                                                                                          //
     //                                                                                                                          //
         NSString *pApp          = [NSString stringWithFormat:@"UCOtren"];                       // Nombre de la aplicación      //
-        NSString *pVersion      = [NSString stringWithFormat:@"1.7"];                           // Versión de la aplicación     //
-        NSString *pBuild        = [NSString stringWithFormat:@"10705"];                         // Build de la aplicación       //
+        NSString *pVersion      = [NSString stringWithFormat:@"1.7.1"];                           // Versión de la aplicación     //
+        NSString *pBuild        = [NSString stringWithFormat:@"10711"];                         // Build de la aplicación       //
         NSString *pPlataform    = [NSString stringWithFormat:@"ios"];                           // Plataforma de la aplicación  //
         NSString *pTipoH        = [NSString stringWithFormat:@"tren"];                          // Tipo de horario a pedir      //
         NSString *pTramos       = [NSString stringWithFormat:@"cordoba-rabanales;rabanales-cordoba"]; // Horarios a pedir       //

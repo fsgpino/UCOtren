@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13D3FAB1A26443B00E0A113 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13D3FA91A26443B00E0A113 /* Crashlytics.framework */; };
+		C13D3FAC1A26443B00E0A113 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13D3FAA1A26443B00E0A113 /* Fabric.framework */; };
 		C1470141182403FD00919BE4 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = C1470137182403FD00919BE4 /* AppIcon29x29.png */; };
 		C1470142182403FD00919BE4 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1470138182403FD00919BE4 /* AppIcon29x29@2x.png */; };
 		C1470143182403FD00919BE4 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = C1470139182403FD00919BE4 /* AppIcon40x40.png */; };
@@ -91,6 +93,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C13D3FA91A26443B00E0A113 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		C13D3FAA1A26443B00E0A113 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		C1470137182403FD00919BE4 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		C1470138182403FD00919BE4 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		C1470139182403FD00919BE4 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
@@ -177,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F5094119F6804E00ED33B3 /* ParseFacebookUtils.framework in Frameworks */,
+				C13D3FAB1A26443B00E0A113 /* Crashlytics.framework in Frameworks */,
 				C19CD91217CEAA7C00B139EC /* SystemConfiguration.framework in Frameworks */,
+				C13D3FAC1A26443B00E0A113 /* Fabric.framework in Frameworks */,
 				C19CD90F17CEAA6A00B139EC /* Security.framework in Frameworks */,
 				C19CD90E17CEAA6300B139EC /* QuartzCore.framework in Frameworks */,
 				C19CD90D17CEAA5C00B139EC /* MobileCoreServices.framework in Frameworks */,
@@ -216,11 +222,13 @@
 		C192E4BA17006D9900564778 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1F5093E19F6804700ED33B3 /* Bolts.framework */,
-				C19CD90C17CEAA5C00B139EC /* MobileCoreServices.framework */,
 				C19CD90617CEAA3500B139EC /* AudioToolbox.framework */,
+				C1F5093E19F6804700ED33B3 /* Bolts.framework */,
+				C13D3FA91A26443B00E0A113 /* Crashlytics.framework */,
 				C19CD8F817CEA8E000B139EC /* CoreLocation.framework */,
 				C192E4BF17006D9900564778 /* CoreGraphics.framework */,
+				C13D3FAA1A26443B00E0A113 /* Fabric.framework */,
+				C19CD90C17CEAA5C00B139EC /* MobileCoreServices.framework */,
 				C1F5093C19F6802500ED33B3 /* Parse.framework */,
 				C1F5094019F6804E00ED33B3 /* ParseFacebookUtils.framework */,
 				C19CD90217CEA90800B139EC /* SystemConfiguration.framework */,
@@ -339,6 +347,7 @@
 				C192E4B517006D9900564778 /* Frameworks */,
 				C192E4B617006D9900564778 /* Resources */,
 				C19CD8F417CEA88500B139EC /* CopyFiles */,
+				C13D3FA81A26440600E0A113 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -447,6 +456,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C13D3FA81A26440600E0A113 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f56762edfd7c1b578d37f6b45e4af058baf66009 19adc1ac566a166098850d451b3cd9c0b339c2c58d9e73573324d988e7f2a9da";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C192E4B417006D9900564778 /* Sources */ = {
@@ -565,7 +591,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCOtren/UCOtren-Prefix.pch";
 				INFOPLIST_FILE = "UCOtren/UCOtren-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0520d704-e45b-4c0d-8d13-e0359d587fb7";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0520d704-e45b-4c0d-8d13-e0359d587fb7";
@@ -589,7 +615,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCOtren/UCOtren-Prefix.pch";
 				INFOPLIST_FILE = "UCOtren/UCOtren-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0520d704-e45b-4c0d-8d13-e0359d587fb7";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0520d704-e45b-4c0d-8d13-e0359d587fb7";

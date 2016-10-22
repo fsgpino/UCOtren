@@ -1,5 +1,10 @@
 ## UCOtren Changelog
 
+### 1.7.1
+
+* Pequeñas correcciones visuales e internas.
+* Añadido el soporte desde iOS 7.0+
+
 ### 1.7.0
 
 * Compatibilidad con iOS 8 y procesadores 64 Bits

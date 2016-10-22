@@ -9,6 +9,8 @@
 
 #import "UCOtren_AppDelegate.h"
 #import <Parse/Parse.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @implementation UCOtren_AppDelegate
 
@@ -18,27 +20,32 @@
                   clientKey:@"CLIENTKEY_PARSE_API_KEY"]; // Change me / Cambialo
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    NSError *error = nil;
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://your.server/your/api/endpoint.php"]]; // Change me / Cambialo
-    NSURLResponse *response = [[NSURLResponse alloc] init];
-    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    _iTunesAppStoreUCOMoveURL = @"";
-    if (data != nil)
-    {
-        NSDictionary *objectJSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        if (objectJSON != nil)
+    [Fabric with:@[CrashlyticsKit]];
+    
+    dispatch_queue_t ucomoveIsAvaliable = dispatch_queue_create("ucomoveIsAvaliable", 0);
+    dispatch_async(ucomoveIsAvaliable, ^{
+        NSError *error = nil;
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://your.server/your/api/endpoint.php"]]; // Change me / Cambialo
+        NSURLResponse *response = [[NSURLResponse alloc] init];
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        _iTunesAppStoreUCOMoveURL = @"";
+        if (data != nil)
         {
-            if ([[objectJSON valueForKey:@"avaliable"]isEqual:[NSString stringWithFormat:@"yes"]]){
-                _iTunesAppStoreUCOMoveURL = [objectJSON valueForKey:@"iTunesAppStoreURL"];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[objectJSON valueForKey:@"header"]
-                                                                message:[objectJSON valueForKey:@"message"]
-                                                               delegate:self
-                                                      cancelButtonTitle:@"Cerrar"
-                                                      otherButtonTitles:[objectJSON valueForKey:@"textButton"],nil];
-                [alert show];
+            NSDictionary *objectJSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            if (objectJSON != nil)
+            {
+                if ([[objectJSON valueForKey:@"avaliable"]isEqual:[NSString stringWithFormat:@"yes"]]){
+                    _iTunesAppStoreUCOMoveURL = [objectJSON valueForKey:@"iTunesAppStoreURL"];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[objectJSON valueForKey:@"header"]
+                                                                    message:[objectJSON valueForKey:@"message"]
+                                                                   delegate:self
+                                                          cancelButtonTitle:@"Cerrar"
+                                                          otherButtonTitles:[objectJSON valueForKey:@"textButton"],nil];
+                    [alert show];
+                }
             }
         }
-    }
+    });
     
     // Register for Push Notitications, if running iOS 8
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
