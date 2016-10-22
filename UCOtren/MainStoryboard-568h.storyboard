@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="39q-sg-P1A">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - Rabanales-->
+        <scene sceneID="ocm-4I-Ly2">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="mLP-Aa-trT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rabanales" image="TabBarImage-UCO.png" id="VJ8-UU-lGK"/>
+                    <navigationItem key="navigationItem" id="ID9-Ps-v9r"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="VGj-nU-EnG">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5CH-Xh-rox" kind="relationship" relationship="rootViewController" id="0rW-o4-LpC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7x-vM-uX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="201"/>
+        </scene>
+        <!--Otren RabanalesA Cordoba - UCOtren_RabanalesACordoba-->
+        <scene sceneID="UMQ-bd-nyy">
+            <objects>
+                <viewController title="UCOtren_RabanalesACordoba" modalTransitionStyle="flipHorizontal" id="5CH-Xh-rox" customClass="UCOtren_RabanalesACordoba" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFill" id="Czq-CZ-ePx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Salida Inmediata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lmU-Rn-YyP">
+                                <rect key="frame" x="0.0" y="19" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Próxima  Salida" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8jR-Pr-jal">
+                                <rect key="frame" x="0.0" y="383" width="157" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tiempo Restante" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vWw-bY-1oK">
+                                <rect key="frame" x="0.0" y="203" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lvI-uC-Vxp">
+                                <rect key="frame" x="0.0" y="65" width="320" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" white="0.27000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfB-79-m59">
+                                <rect key="frame" x="0.0" y="65" width="320" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" red="0.0" green="0.96464839339999997" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ySw-ym-bGt">
+                                <rect key="frame" x="165" y="379" width="155" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
+                                <color key="textColor" white="0.26817666330000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5r1-6P-Kjo">
+                                <rect key="frame" x="165" y="379" width="155" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oxo-dG-B1P">
+                                <rect key="frame" x="0.0" y="249" width="118" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" white="0.2677671371" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hkz-cL-nUi">
+                                <rect key="frame" x="0.0" y="249" width="118" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qf0-A2-BMJ">
+                                <rect key="frame" x="151" y="249" width="84" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" white="0.27368951609999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LiU-ue-dq6">
+                                <rect key="frame" x="151" y="249" width="84" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="H" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5M-SY-Z9j">
+                                <rect key="frame" x="126" y="300" width="17" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Rs-JN-SQF">
+                                <rect key="frame" x="243" y="300" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ro-kq-Ba6">
+                                <rect key="frame" x="-10" y="163" width="341" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CQL-SL-nzq">
+                                <rect key="frame" x="-10" y="350" width="341" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UCOtren" id="eFq-CT-jFq">
+                        <barButtonItem key="backBarButtonItem" title="Atras" id="9GI-HP-biW"/>
+                        <barButtonItem key="leftBarButtonItem" image="TabBarImage-Info.png" id="Ttv-J4-Lqo">
+                            <connections>
+                                <action selector="informacion:" destination="5CH-Xh-rox" id="e25-ug-loG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="TabBarImage-Horarios.png" id="uz9-Hw-7X6">
+                            <connections>
+                                <segue destination="dBD-P4-mUv" kind="modal" modalTransitionStyle="coverVertical" id="7yf-al-Cta"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="HorasRestantesSalidaRabanalesACordoba" destination="hkz-cL-nUi" id="cD4-0y-xvw"/>
+                        <outlet property="MinutosRestantesSalidaRabanalesACordoba" destination="LiU-ue-dq6" id="w0G-L5-Gez"/>
+                        <outlet property="SombraHorasRestantesSalidaRabanalesACordoba" destination="Oxo-dG-B1P" id="LG5-nE-ckB"/>
+                        <outlet property="SombraMinutosRestantesSalidaRabanalesACordoba" destination="Qf0-A2-BMJ" id="kY9-kj-oQF"/>
+                        <outlet property="SombraProximaSalidaRabanalesACordoba" destination="ySw-ym-bGt" id="HQB-SA-VRK"/>
+                        <outlet property="SombraSalidaRabanalesACordoba" destination="lvI-uC-Vxp" id="yU9-mj-X24"/>
+                        <outlet property="horaProximaSalidaRabanalesACordoba" destination="5r1-6P-Kjo" id="X7K-Gn-zE1"/>
+                        <outlet property="horaSalidaRabanalesACordoba" destination="TfB-79-m59" id="8pp-Px-l5T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIn-GJ-ATL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="201"/>
+        </scene>
+        <!--Otren Horarios-->
+        <scene sceneID="w99-ya-de6">
+            <objects>
+                <viewController id="dBD-P4-mUv" customClass="UCOtren_Horarios" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Z7-Nj-95a">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="160" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="IWz-Z4-RoQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Horarios" id="qLP-Qb-HM1">
+                                        <barButtonItem key="leftBarButtonItem" title="Cerrar" id="yet-Vo-FG1">
+                                            <connections>
+                                                <action selector="volverAtras:" destination="dBD-P4-mUv" id="gv2-KN-7x0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" id="V64-Vl-rfG">
+                                <rect key="frame" x="0.0" y="44" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="V74-hP-Rwb">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="858"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="separatorColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellCordobaARabanales" id="tHj-Po-JKU">
+                                                <rect key="frame" x="0.0" y="22" width="160" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <tableView clipsSubviews="YES" tag="1" contentMode="center" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rQR-yV-XCW">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="858"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="separatorColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellRabanalesACordoba" id="mP4-Pq-fIQ">
+                                                <rect key="frame" x="0.0" y="22" width="160" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <sections/>
+                                    </tableView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Scroller" destination="V64-Vl-rfG" id="ds7-6u-03V"/>
+                        <outlet property="tablaSalidasCordobaARabanales" destination="V74-hP-Rwb" id="w8z-rc-tye"/>
+                        <outlet property="tablaSalidasRabanalesACordoba" destination="rQR-yV-XCW" id="Ie0-XS-RUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RiK-Lt-lIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="-161"/>
+        </scene>
+        <!--Otren CordobaA Rabanales - UCOtren_CordobaARabanales-->
+        <scene sceneID="mK5-K1-Rmg">
+            <objects>
+                <viewController title="UCOtren_CordobaARabanales" id="P77-On-RQZ" customClass="UCOtren_CordobaARabanales" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tWn-E7-tgy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bw5-Pj-hIw">
+                                <rect key="frame" x="-10" y="163" width="341" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pat-De-8pu">
+                                <rect key="frame" x="-10" y="349" width="341" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Salida Inmediata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Idq-vx-s7P">
+                                <rect key="frame" x="0.0" y="19" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Próxima  Salida" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y1l-XL-qce">
+                                <rect key="frame" x="0.0" y="383" width="157" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tiempo Restante" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qsi-AX-U83">
+                                <rect key="frame" x="0.0" y="203" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AUp-ZZ-cIl">
+                                <rect key="frame" x="0.0" y="65" width="320" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" white="0.27000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ptk-mI-TfQ">
+                                <rect key="frame" x="0.0" y="65" width="320" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" red="0.0" green="0.96464839339999997" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BQN-tm-zlg">
+                                <rect key="frame" x="165" y="379" width="155" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
+                                <color key="textColor" white="0.26817666330000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lmJ-Jz-CnV">
+                                <rect key="frame" x="165" y="379" width="155" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HME-Px-yjs">
+                                <rect key="frame" x="0.0" y="249" width="118" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" white="0.27340599799999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zmi-qG-0z2">
+                                <rect key="frame" x="0.0" y="249" width="118" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X37-jb-Pma">
+                                <rect key="frame" x="151" y="249" width="84" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" white="0.26953125" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TlD-UR-8Rn">
+                                <rect key="frame" x="151" y="249" width="84" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="75"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="H" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="13R-WN-T9J">
+                                <rect key="frame" x="126" y="300" width="17" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mIk-tk-wFF">
+                                <rect key="frame" x="243" y="300" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UCOtren" id="L9h-9Z-BM7">
+                        <barButtonItem key="backBarButtonItem" title="Atras" id="tvI-Zm-pA6"/>
+                        <barButtonItem key="leftBarButtonItem" image="TabBarImage-Info.png" id="K5c-1y-dKR">
+                            <connections>
+                                <action selector="informacion:" destination="P77-On-RQZ" id="aIw-5Q-cm6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="TabBarImage-Horarios.png" id="fpH-yS-4Cf">
+                            <connections>
+                                <segue destination="dBD-P4-mUv" kind="modal" modalTransitionStyle="coverVertical" id="qlH-Ir-4Os"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="HorasRestantesSalidaCordobaARabanales" destination="zmi-qG-0z2" id="i2e-wq-rYW"/>
+                        <outlet property="MinutosRestantesSalidaCordobaARabanales" destination="TlD-UR-8Rn" id="pxD-P0-CyO"/>
+                        <outlet property="SombraHorasRestantesSalidaCordobaARabanales" destination="HME-Px-yjs" id="IsQ-F6-DcK"/>
+                        <outlet property="SombraMinutosRestantesSalidaCordobaARabanales" destination="X37-jb-Pma" id="eAS-fC-HyN"/>
+                        <outlet property="SombraProximaSalidaCordobaARabanales" destination="BQN-tm-zlg" id="ddJ-5C-w8s"/>
+                        <outlet property="SombraSalidaCordobaARabanales" destination="AUp-ZZ-cIl" id="gBH-I9-Qnc"/>
+                        <outlet property="horaProximaSalidaCordobaARabanales" destination="lmJ-Jz-CnV" id="Ea6-Yi-obj"/>
+                        <outlet property="horaSalidaCordobaARabanales" destination="Ptk-mI-TfQ" id="OeA-vT-3Qz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZC-c5-vnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="-533"/>
+        </scene>
+        <!--Tab Bar Controller - UCOtren_TabBat-->
+        <scene sceneID="shn-Ot-AoZ">
+            <objects>
+                <tabBarController title="UCOtren_TabBat" definesPresentationContext="YES" id="39q-sg-P1A" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="UCOtren" id="zfF-B5-0Js"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="hWn-lf-oXx">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SWW-Cc-Ebk" kind="relationship" relationship="viewControllers" id="Ovc-QN-dHj"/>
+                        <segue destination="mLP-Aa-trT" kind="relationship" relationship="viewControllers" id="tJp-Hh-Tgu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prk-4w-6DB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-464" y="-161"/>
+        </scene>
+        <!--Navigation Controller - Córdoba-->
+        <scene sceneID="nFv-rm-Vk2">
+            <objects>
+                <navigationController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="SWW-Cc-Ebk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Córdoba" image="TabBarImage-Cordoba.png" id="gHf-qd-KKg"/>
+                    <navigationItem key="navigationItem" id="Si6-Wa-34C"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="d18-EX-hbv">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="R7j-er-isR">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="P77-On-RQZ" kind="relationship" relationship="rootViewController" id="NPS-21-KrU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOB-av-pyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="-533"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabBarImage-Cordoba.png" width="17" height="30"/>
+        <image name="TabBarImage-Horarios.png" width="20" height="20"/>
+        <image name="TabBarImage-Info.png" width="19" height="30"/>
+        <image name="TabBarImage-UCO.png" width="23" height="30"/>
+    </resources>
+    <classes>
+        <class className="UCOtren_CordobaARabanales" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UCOtren_CordobaARabanales.h"/>
+            <relationships>
+                <relationship kind="action" name="informacion:"/>
+                <relationship kind="outlet" name="HorasRestantesSalidaCordobaARabanales" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="MinutosRestantesSalidaCordobaARabanales" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SombraHorasRestantesSalidaCordobaARabanales" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SombraMinutosRestantesSalidaCordobaARabanales" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SombraProximaSalidaCordobaARabanales" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SombraSalidaCordobaARabanales" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="horaProximaSalidaCordobaARabanales" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="horaSalidaCordobaARabanales" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UCOtren_Horarios" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UCOtren_Horarios.h"/>
+            <relationships>
+                <relationship kind="action" name="volverAtras:"/>
+                <relationship kind="outlet" name="Scroller" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tablaSalidasCordobaARabanales" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="tablaSalidasRabanalesACordoba" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="UCOtren_RabanalesACordoba" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UCOtren_RabanalesACordoba.h"/>
+            <relationships>
+                <relationship kind="action" name="informacion:"/>
+                <relationship kind="outlet" name="HorasRestantesSalidaRabanalesACordoba" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="MinutosRestantesSalidaRabanalesACordoba" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SombraHorasRestantesSalidaRabanalesACordoba" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SombraMinutosRestantesSalidaRabanalesACordoba" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SombraProximaSalidaRabanalesACordoba" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SombraSalidaRabanalesACordoba" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="horaProximaSalidaRabanalesACordoba" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="horaSalidaRabanalesACordoba" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="7yf-al-Cta"/>
+    </inferredMetricsTieBreakers>
+</document>
