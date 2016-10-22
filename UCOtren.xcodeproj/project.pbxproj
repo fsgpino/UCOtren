@@ -45,7 +45,6 @@
 		C192E501170084DB00564778 /* UCOtren_RabanalesACordoba.m in Sources */ = {isa = PBXBuildFile; fileRef = C192E500170084DB00564778 /* UCOtren_RabanalesACordoba.m */; };
 		C192E5071700857100564778 /* UCOtren_CordobaARabanales.m in Sources */ = {isa = PBXBuildFile; fileRef = C192E5061700857100564778 /* UCOtren_CordobaARabanales.m */; };
 		C192E50917009C9F00564778 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C192E50817009C9F00564778 /* Roboto-Light.ttf */; };
-		C19CD90517CEA9D000B139EC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD90417CEA9D000B139EC /* Parse.framework */; };
 		C19CD90717CEAA3500B139EC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD90617CEAA3500B139EC /* AudioToolbox.framework */; };
 		C19CD90817CEAA3A00B139EC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CD8F617CEA8D000B139EC /* CFNetwork.framework */; };
 		C19CD90917CEAA4600B139EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C192E4BF17006D9900564778 /* CoreGraphics.framework */; };
@@ -74,6 +73,9 @@
 		C1DB4F7C1824162600CDE4D1 /* TabBarImage-HorariosA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1DB4F781824162600CDE4D1 /* TabBarImage-HorariosA@2x.png */; };
 		C1DB4F7D1824162600CDE4D1 /* TabBarImage-InfoA.png in Resources */ = {isa = PBXBuildFile; fileRef = C1DB4F791824162600CDE4D1 /* TabBarImage-InfoA.png */; };
 		C1DB4F7E1824162600CDE4D1 /* TabBarImage-InfoA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1DB4F7A1824162600CDE4D1 /* TabBarImage-InfoA@2x.png */; };
+		C1F5093D19F6802500ED33B3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F5093C19F6802500ED33B3 /* Parse.framework */; };
+		C1F5093F19F6804700ED33B3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F5093E19F6804700ED33B3 /* Bolts.framework */; };
+		C1F5094119F6804E00ED33B3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F5094019F6804E00ED33B3 /* ParseFacebookUtils.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -143,7 +145,6 @@
 		C19CD8FE17CEA8FB00B139EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C19CD90017CEA90100B139EC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C19CD90217CEA90800B139EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C19CD90417CEA9D000B139EC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C19CD90617CEAA3500B139EC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C19CD90C17CEAA5C00B139EC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C19DA1D2174F93A30001DD9F /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = "es.lproj/MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
@@ -165,6 +166,9 @@
 		C1DB4F781824162600CDE4D1 /* TabBarImage-HorariosA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarImage-HorariosA@2x.png"; path = "Images/TabBarImage-HorariosA@2x.png"; sourceTree = "<group>"; };
 		C1DB4F791824162600CDE4D1 /* TabBarImage-InfoA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarImage-InfoA.png"; path = "Images/TabBarImage-InfoA.png"; sourceTree = "<group>"; };
 		C1DB4F7A1824162600CDE4D1 /* TabBarImage-InfoA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarImage-InfoA@2x.png"; path = "Images/TabBarImage-InfoA@2x.png"; sourceTree = "<group>"; };
+		C1F5093C19F6802500ED33B3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C1F5093E19F6804700ED33B3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C1F5094019F6804E00ED33B3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F5094119F6804E00ED33B3 /* ParseFacebookUtils.framework in Frameworks */,
 				C19CD91217CEAA7C00B139EC /* SystemConfiguration.framework in Frameworks */,
 				C19CD90F17CEAA6A00B139EC /* Security.framework in Frameworks */,
 				C19CD90E17CEAA6300B139EC /* QuartzCore.framework in Frameworks */,
@@ -179,11 +184,12 @@
 				C19CD90B17CEAA5400B139EC /* libz.1.1.3.dylib in Frameworks */,
 				C19CD90A17CEAA4E00B139EC /* CoreLocation.framework in Frameworks */,
 				C19CD90917CEAA4600B139EC /* CoreGraphics.framework in Frameworks */,
+				C1F5093F19F6804700ED33B3 /* Bolts.framework in Frameworks */,
 				C19CD90817CEAA3A00B139EC /* CFNetwork.framework in Frameworks */,
 				C19CD90717CEAA3500B139EC /* AudioToolbox.framework in Frameworks */,
 				C192E4BC17006D9900564778 /* UIKit.framework in Frameworks */,
+				C1F5093D19F6802500ED33B3 /* Parse.framework in Frameworks */,
 				C192E4BE17006D9900564778 /* Foundation.framework in Frameworks */,
-				C19CD90517CEA9D000B139EC /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,11 +216,13 @@
 		C192E4BA17006D9900564778 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1F5093E19F6804700ED33B3 /* Bolts.framework */,
 				C19CD90C17CEAA5C00B139EC /* MobileCoreServices.framework */,
 				C19CD90617CEAA3500B139EC /* AudioToolbox.framework */,
-				C19CD90417CEA9D000B139EC /* Parse.framework */,
 				C19CD8F817CEA8E000B139EC /* CoreLocation.framework */,
 				C192E4BF17006D9900564778 /* CoreGraphics.framework */,
+				C1F5093C19F6802500ED33B3 /* Parse.framework */,
+				C1F5094019F6804E00ED33B3 /* ParseFacebookUtils.framework */,
 				C19CD90217CEA90800B139EC /* SystemConfiguration.framework */,
 				C19CD90017CEA90100B139EC /* Security.framework */,
 				C19CD8FE17CEA8FB00B139EC /* QuartzCore.framework */,
@@ -547,19 +555,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Francisco Solano Gomez Pino (8Y8DX8Q88R)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Francisco Solano Gomez Pino (G8L93ZPLU7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Francisco Solano Gomez Pino (G8L93ZPLU7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCOtren/UCOtren-Prefix.pch";
 				INFOPLIST_FILE = "UCOtren/UCOtren-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3201AE1B-F3EB-4C93-9494-B8C059B1E436";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3201AE1B-F3EB-4C93-9494-B8C059B1E436";
+				PROVISIONING_PROFILE = "0520d704-e45b-4c0d-8d13-e0359d587fb7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0520d704-e45b-4c0d-8d13-e0359d587fb7";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -570,19 +579,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Francisco Solano Gomez Pino (8Y8DX8Q88R)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Francisco Solano Gomez Pino (G8L93ZPLU7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Francisco Solano Gomez Pino (G8L93ZPLU7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCOtren/UCOtren-Prefix.pch";
 				INFOPLIST_FILE = "UCOtren/UCOtren-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3201AE1B-F3EB-4C93-9494-B8C059B1E436";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3201AE1B-F3EB-4C93-9494-B8C059B1E436";
+				PROVISIONING_PROFILE = "0520d704-e45b-4c0d-8d13-e0359d587fb7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0520d704-e45b-4c0d-8d13-e0359d587fb7";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

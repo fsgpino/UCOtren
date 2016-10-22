@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vkj-Jr-Y5i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vkj-Jr-Y5i">
     <dependencies>
-        <deployment version="1280" defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <deployment version="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - Rabanales-->
+        <!--Rabanales-->
         <scene sceneID="oMt-6t-LkS">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="rLX-bA-x5l" sceneMemberID="viewController">
@@ -17,7 +17,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="8IM-zE-CjM">
-                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -28,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="80" y="201"/>
         </scene>
-        <!--Otren RabanalesA Cordoba - UCOtren_RabanalesACordoba-->
+        <!--UCOtren_RabanalesACordoba-->
         <scene sceneID="VZ3-Cb-J8c">
             <objects>
                 <viewController title="UCOtren_RabanalesACordoba" wantsFullScreenLayout="YES" modalTransitionStyle="flipHorizontal" id="Ypj-uu-GYP" customClass="UCOtren_RabanalesACordoba" sceneMemberID="viewController">
@@ -280,7 +279,7 @@
             </objects>
             <point key="canvasLocation" x="1100" y="-161"/>
         </scene>
-        <!--Otren CordobaA Rabanales - UCOtren_CordobaARabanales-->
+        <!--UCOtren_CordobaARabanales-->
         <scene sceneID="8bJ-XV-RgP">
             <objects>
                 <viewController title="UCOtren_CordobaARabanales" wantsFullScreenLayout="YES" id="wKd-1q-VQi" customClass="UCOtren_CordobaARabanales" sceneMemberID="viewController">
@@ -450,7 +449,7 @@
             </objects>
             <point key="canvasLocation" x="559" y="-533"/>
         </scene>
-        <!--Tab Bar Controller - UCOtren_TabBat-->
+        <!--UCOtren_TabBat-->
         <scene sceneID="SBu-YM-jaj">
             <objects>
                 <tabBarController title="UCOtren_TabBat" wantsFullScreenLayout="YES" definesPresentationContext="YES" id="vkj-Jr-Y5i" sceneMemberID="viewController">
@@ -474,7 +473,7 @@
             </objects>
             <point key="canvasLocation" x="-464" y="-161"/>
         </scene>
-        <!--Navigation Controller - Córdoba-->
+        <!--Córdoba-->
         <scene sceneID="kuJ-a5-RGY">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="rwn-6P-86I" sceneMemberID="viewController">
@@ -486,7 +485,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Ln2-tS-Q2Y">
-                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="XzP-bq-Mv6">

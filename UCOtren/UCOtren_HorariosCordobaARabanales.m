@@ -30,30 +30,30 @@
     origenSalidasCordobaARabanales = [[dataFile objectAtIndex:3] componentsSeparatedByString: @"|"];
     
     //Declaración del horario de cada una de las salidas, el ultimo valor del vector y de un contador auxiliar que se usa en la función
-    int ultimoValorHorario = ([origenSalidasCordobaARabanales count] - 1);
-    int contadorAuxiliar = 0;
+    NSUInteger ultimoValorHorario = ([origenSalidasCordobaARabanales count] - 1);
+    NSUInteger contadorAuxiliar = 0;
     
     //Declaración de un puntero que contiene un formateador de fecha, usado para convertir la hora actual en segundos
     NSDateFormatter *FormateadorFecha = [[NSDateFormatter alloc] init];
     
     //Se define en el formateador de fecha que se quiere devolver las horas y se guardan en la variable
     [FormateadorFecha setDateFormat:@"HH"];
-    int HorasActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
+    NSUInteger HorasActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
     
     //Se define en el formateador de fecha que se quiere devolver los minutos y se guardan en la variable
     [FormateadorFecha setDateFormat:@"mm"];
-    int MinutosActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
+    NSUInteger MinutosActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
     
     //Se define en el formateador de fecha que se quiere devolver los segundos y se guardan en la variable
     [FormateadorFecha setDateFormat:@"ss"];
-    int SegundosActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
+    NSUInteger SegundosActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
     
     //Se define en el formateador de fecha que se quiere devolver el día de la semana y se guarda en la variable
     [FormateadorFecha setDateFormat:@"e"];
-    int DiaSemanaActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
+    NSUInteger DiaSemanaActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
     
     //Se suma todo y se almacena en la variable
-    int TotalSegundosActual = HorasActual*3600+MinutosActual*60+SegundosActual;
+    NSUInteger TotalSegundosActual = HorasActual*3600+MinutosActual*60+SegundosActual;
     
     //Se verifica que el total de segundos no sea mayor que el ultimo de los horarios y no sea sabado o domingo
     if((TotalSegundosActual > [self StringASegundos:[origenSalidasCordobaARabanales objectAtIndex:ultimoValorHorario]])||(DiaSemanaActual==6)||(DiaSemanaActual==7))
@@ -69,15 +69,17 @@
     }
     
     horaSiguiente=[self StringASegundos:[origenSalidasCordobaARabanales objectAtIndex:contadorAuxiliar]];
+    
+    [super viewDidLoad];
 }
 
 //FUNCION: StringASegundos (Devuelve en segundos la hora pasada como parametro HH:MM -> S)
--(NSInteger) StringASegundos: (NSString *) hora
+-(NSUInteger) StringASegundos: (NSString *) hora
 {
     NSArray* HH_MM = [hora componentsSeparatedByString: @":"];
     
-    NSInteger Horas = [[HH_MM objectAtIndex:0] integerValue];
-    NSInteger Minutos = [[HH_MM objectAtIndex:1] integerValue];
+    NSUInteger Horas = [[HH_MM objectAtIndex:0] integerValue];
+    NSUInteger Minutos = [[HH_MM objectAtIndex:1] integerValue];
     
     return ((Horas*3600)+(Minutos*60));
 }
@@ -105,7 +107,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     cell.textLabel.text = [origenSalidasCordobaARabanales objectAtIndex:indexPath.row];
-    cell.textLabel.textAlignment = UITextAlignmentCenter;
+    //cell.textLabel.textAlignment = UITextAlignmentCenter; // Deprecated in iOS 6
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     
     NSArray *datosSeparados = [cell.textLabel.text componentsSeparatedByString:@":"];
     

@@ -85,7 +85,8 @@
 
 //FUNCION: volverAtras (Se activa llamada por un boton y cierra el view)
 -(IBAction)volverAtras:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    //[self dismissModalViewControllerAnimated:YES]; // DEPRECATED in iOS 6
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

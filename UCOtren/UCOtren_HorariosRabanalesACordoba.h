@@ -12,12 +12,12 @@
 
 @interface UCOtren_HorariosRabanalesACordoba : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
     NSArray *origenSalidasRabanalesACordoba;
-    int horaSiguiente;
+    NSUInteger horaSiguiente;
 }
 
 @property (nonatomic,retain) NSArray *origenSalidasRabanalesACordoba;
-@property (assign) int horaSiguiente;
+@property (assign) NSUInteger horaSiguiente;
 
--(NSInteger) StringASegundos: (NSString *) hora;
+-(NSUInteger) StringASegundos: (NSString *) hora;
 
 @end

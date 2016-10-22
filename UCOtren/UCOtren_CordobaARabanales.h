@@ -23,17 +23,17 @@
 @property (nonatomic,strong) IBOutlet UIBarButtonItem *bacercade;
 @property (nonatomic,strong) IBOutlet UIBarButtonItem *bhorario;
 
-@property (assign) int segundosSalida;
-@property (assign) int segundosRestantesSalida;
-@property (assign) int segundosProximaSalida;
-@property (assign) int alternador;
-@property (assign) int errorMemoria;
+@property (assign) NSUInteger segundosSalida;
+@property (assign) NSUInteger segundosRestantesSalida;
+@property (assign) NSUInteger segundosProximaSalida;
+@property (assign) NSUInteger alternador;
+@property (assign) NSUInteger errorMemoria;
 
 - (void)inicioDelView;
 - (IBAction)informacion:(id)sender;
 - (IBAction)recargarHorario:(id)sender;
 - (void)relojEnCurso:(NSTimer *)timer;
 - (void)actualizarDatosEnPantalla;
-- (NSInteger) StringASegundos: (NSString *) hora;
-- (NSInteger) actualizaHorario;
+- (NSUInteger) StringASegundos: (NSString *) hora;
+- (NSUInteger) actualizaHorario;
 @end

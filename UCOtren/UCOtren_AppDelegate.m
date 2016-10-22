@@ -18,15 +18,52 @@
                   clientKey:@"CLIENTKEY_PARSE_API_KEY"]; // Change me / Cambialo
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
-     UIRemoteNotificationTypeAlert|
-     UIRemoteNotificationTypeSound];
+    NSError *error = nil;
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://your.server/your/api/endpoint.php"]]; // Change me / Cambialo
+    NSURLResponse *response = [[NSURLResponse alloc] init];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    _iTunesAppStoreUCOMoveURL = @"";
+    if (data != nil)
+    {
+        NSDictionary *objectJSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        if (objectJSON != nil)
+        {
+            if ([[objectJSON valueForKey:@"avaliable"]isEqual:[NSString stringWithFormat:@"yes"]]){
+                _iTunesAppStoreUCOMoveURL = [objectJSON valueForKey:@"iTunesAppStoreURL"];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[objectJSON valueForKey:@"header"]
+                                                                message:[objectJSON valueForKey:@"message"]
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Cerrar"
+                                                      otherButtonTitles:[objectJSON valueForKey:@"textButton"],nil];
+                [alert show];
+            }
+        }
+    }
+    
+    // Register for Push Notitications, if running iOS 8
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                        UIUserNotificationTypeBadge |
+                                                        UIUserNotificationTypeSound);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                                 categories:nil];
+        [application registerUserNotificationSettings:settings];
+        [application registerForRemoteNotifications];
+    } else {
+        // Register for Push Notifications before iOS 8
+        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                         UIRemoteNotificationTypeAlert |
+                                                         UIRemoteNotificationTypeSound)];
+    }
     
     //******* SOBREESCRIBE LA APARIENCIA DE LA BARRA DE NAVEGACIÓN ***********
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
-                                                           UITextAttributeTextShadowOffset,
-                                                           [UIFont fontWithName:@"Roboto-Light" size:21.0], UITextAttributeFont, nil]];
+    //[[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+    //                                                       [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
+    //                                                       UITextAttributeTextShadowOffset,
+    //                                                       [UIFont fontWithName:@"Roboto-Light" size:21.0], UITextAttributeFont, nil]]; // Deprecated in iOS 7
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Roboto-Light" size:21],NSFontAttributeName, nil]];
+    
+    
     //**** FIN DE SOBREESCRIBE LA APARIENCIA DE LA BARRA DE NAVEGACIÓN *******
     
     //************* En caso de ser iPhone 5 cambia el storyboard *************
@@ -45,6 +82,12 @@
     //********* FIN de En caso de ser iPhone 5 cambia el storyboard **********
 
     return YES;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSUInteger)buttonIndex {
+    if (buttonIndex != 0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_iTunesAppStoreUCOMoveURL]];
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -89,6 +132,7 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
+    currentInstallation.channels = @[ @"global" ];
     [currentInstallation saveInBackground];
 }
 

@@ -84,7 +84,7 @@
 
 - (void)inicioDelView
 {
-    NSInteger status = [self actualizaHorario];
+    NSUInteger status = [self actualizaHorario];
     NSString *MStatus = nil;
 
     if (status==0)
@@ -179,7 +179,7 @@
     [alert show];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSUInteger)buttonIndex {
     if (buttonIndex != 0) {
         [self recargarHorario:0];
     }
@@ -187,7 +187,7 @@
 
 -(IBAction)recargarHorario:(id)sender {
 
-    NSInteger status = [self actualizaHorario];
+    NSUInteger status = [self actualizaHorario];
     NSString *MStatus = nil;
 
     if (status==0)
@@ -260,30 +260,30 @@
         NSArray* horario = [[dataFile objectAtIndex:3] componentsSeparatedByString: @"|"];
         if ([horario count] > 0)
         {
-            int ultimoValorHorario = ([horario count] - 1);
-            int contadorAuxiliar = 0;
+            NSUInteger ultimoValorHorario = ([horario count] - 1);
+            NSUInteger contadorAuxiliar = 0;
     
             //Declaración de un puntero que contiene un formateador de fecha, usado para convertir la hora actual en segundos
             NSDateFormatter *FormateadorFecha = [[NSDateFormatter alloc] init];
     
             //Se define en el formateador de fecha que se quiere devolver las horas y se guardan en la variable
             [FormateadorFecha setDateFormat:@"HH"];
-            int HorasActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
+            NSUInteger HorasActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
     
             //Se define en el formateador de fecha que se quiere devolver los minutos y se guardan en la variable
             [FormateadorFecha setDateFormat:@"mm"];
-            int MinutosActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
+            NSUInteger MinutosActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
     
             //Se define en el formateador de fecha que se quiere devolver los segundos y se guardan en la variable
             [FormateadorFecha setDateFormat:@"ss"];
-            int SegundosActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
+            NSUInteger SegundosActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
     
             //Se define en el formateador de fecha que se quiere devolver el día de la semana y se guarda en la variable
             [FormateadorFecha setDateFormat:@"e"];
-            int DiaSemanaActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
+            NSUInteger DiaSemanaActual = [[FormateadorFecha stringFromDate:[NSDate date]] intValue];
     
             //Se suma todo y se almacena en la variable
-            int TotalSegundosActual = HorasActual*3600+MinutosActual*60+SegundosActual;
+            NSUInteger TotalSegundosActual = HorasActual*3600+MinutosActual*60+SegundosActual;
     
             //Se verifica que el total de segundos no sea mayor que el ultimo de los horarios y no sea sabado o domingo
             if((TotalSegundosActual > [self StringASegundos:[horario objectAtIndex:ultimoValorHorario]])||(DiaSemanaActual==6)||(DiaSemanaActual==7))
@@ -314,7 +314,7 @@
     
     
             //Se muestra un resumen de los datos en el Log
-            NSLog(@" * Reloj de Córdoba a Rabanales: Segundos salida inminente: %d, Segundos restantes salida inminente: %d, Segundos Próxima salida: %d, Segundos Actual: %d\n", segundosSalida, segundosRestantesSalida, segundosProximaSalida, TotalSegundosActual);
+            NSLog(@" * Reloj de Córdoba a Rabanales: Segundos salida inminente: %zd, Segundos restantes salida inminente: %zd, Segundos Próxima salida: %zd, Segundos Actual: %zd\n", segundosSalida, segundosRestantesSalida, segundosProximaSalida, TotalSegundosActual);
     
             //Se llama a una función encargada de mostrar los resultados por pantalla
             [self actualizarDatosEnPantalla];
@@ -334,41 +334,41 @@
     //Se muestra la hora de la salida inminente y proxima, alternandose los : cada segundo que transcurre
     if (alternador==0)
     {
-        self.horaSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02d %02d",segundosSalida/3600,(segundosSalida/60)%60];
-        self.horaProximaSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02d %02d",segundosProximaSalida/3600,(segundosProximaSalida/60)%60];
+        self.horaSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02zd %02zd",segundosSalida/3600,(segundosSalida/60)%60];
+        self.horaProximaSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02zd %02zd",segundosProximaSalida/3600,(segundosProximaSalida/60)%60];
         alternador=1;
     }else{
-        self.horaSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02d:%02d",segundosSalida/3600,(segundosSalida/60)%60];
-        self.horaProximaSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02d:%02d",segundosProximaSalida/3600,(segundosProximaSalida/60)%60];
+        self.horaSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02zd:%02zd",segundosSalida/3600,(segundosSalida/60)%60];
+        self.horaProximaSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02zd:%02zd",segundosProximaSalida/3600,(segundosProximaSalida/60)%60];
         alternador=0;
     }
     
     //Se muestra el tiempo restante para la salida inminente
-    self.HorasRestantesSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02d",segundosRestantesSalida/3600];
-    self.MinutosRestantesSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02d",(segundosRestantesSalida/60)%60];
+    self.HorasRestantesSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02zd",segundosRestantesSalida/3600];
+    self.MinutosRestantesSalidaCordobaARabanales.text =[NSString stringWithFormat:@"%02zd",(segundosRestantesSalida/60)%60];
 }
 
 //FUNCION: StringASegundos (Devuelve en segundos la hora pasada como parametro HH:MM -> S)
--(NSInteger) StringASegundos: (NSString *) hora
+-(NSUInteger) StringASegundos: (NSString *) hora
 {
     NSArray* HH_MM = [hora componentsSeparatedByString: @":"];
     
-    NSInteger Horas = [[HH_MM objectAtIndex:0] integerValue];
-    NSInteger Minutos = [[HH_MM objectAtIndex:1] integerValue];
+    NSUInteger Horas = [[HH_MM objectAtIndex:0] integerValue];
+    NSUInteger Minutos = [[HH_MM objectAtIndex:1] integerValue];
     
     return ((Horas*3600)+(Minutos*60));
 }
 
 //FUNCION: actualizaHorario (Actualiza el horarios almacenados en ficheros conectandose a la API de UCOmove)
-- (NSInteger)actualizaHorario
+- (NSUInteger)actualizaHorario
 {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                                                          //
-    //                      FUNCIÓN DE ACTUALIZACIÓN DE HORARIOS CON UCOAPI 1.2 - Por Francisco Gómez Pino                      //
+    //                      FUNCIÓN DE ACTUALIZACIÓN DE HORARIOS CON UCOAPI 1.3 - Por Francisco Gómez Pino                      //
     //                                                                                                                          //
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                                                          //
-    //  - VERSIÓN PARA: UCOTREN 1.6                                                                                             //
+    //  - VERSIÓN PARA: UCOTREN 1.7                                                                                             //
     //                                                                                                                          //
     //  - SALIDAS DE LA FUNCIÓN:                                                                                                //
     //      - return 0: Actualización realizada con exito.                                                                      //
@@ -381,13 +381,13 @@
     //                                                                                                                          //
     //  - PARAMETROS DE CONFIGURACIÓN:                                                                                          //
     //                                                                                                                          //
-    NSString *pApp          = [NSString stringWithFormat:@"UCOtren"];                       // Nombre de la aplicación          //
-    NSString *pVersion      = [NSString stringWithFormat:@"1.6"];                           // Versión de la aplicación         //
-    NSString *pBuild        = [NSString stringWithFormat:@"10615"];                         // Build de la aplicación           //
-    NSString *pPlataform    = [NSString stringWithFormat:@"ios"];                           // Plataforma de la aplicación      //
-    NSString *pTipoH        = [NSString stringWithFormat:@"tren"];                          // Tipo de horario a pedir          //
-    NSString *pTramos       = [NSString stringWithFormat:@"cordoba-rabanales;rabanales-cordoba"]; // Horarios a pedir           //
-    NSString *pFormatH      = [NSString stringWithFormat:@"1"];                             // Formato de horario a pedir       //
+    NSString *pApp          = [NSString stringWithFormat:@"UCOtren"];                       // Nombre de la aplicación      //
+    NSString *pVersion      = [NSString stringWithFormat:@"1.7"];                           // Versión de la aplicación     //
+    NSString *pBuild        = [NSString stringWithFormat:@"10705"];                         // Build de la aplicación       //
+    NSString *pPlataform    = [NSString stringWithFormat:@"ios"];                           // Plataforma de la aplicación  //
+    NSString *pTipoH        = [NSString stringWithFormat:@"tren"];                          // Tipo de horario a pedir      //
+    NSString *pTramos       = [NSString stringWithFormat:@"cordoba-rabanales;rabanales-cordoba"]; // Horarios a pedir       //
+    NSString *pFormatH      = [NSString stringWithFormat:@"1"];                             // Formato de horario a pedir   //
     //                                                                                                                          //
     //  - PARAMETROS DE CONEXÍON (URL de descarga):                                                                             //
     //                                                                                                                          //
@@ -395,9 +395,9 @@
     //                                                                                                                          //
     //  - PARAMETROS DE ALMACENAMIENTO:                                                                                         //
     //                                                                                                                          //
-    NSString *fileNameCR = [NSString stringWithFormat:@"tramo-CR.plist"];   // Nombre el horario Cordoba-Rabanales              //
-    NSString *fileNameRC = [NSString stringWithFormat:@"tramo-RC.plist"];   // Nombre el horario Rabanales-Cordoba              //
-    NSString *fileNameMS = [NSString stringWithFormat:@"mensaje.txt"];      // Nombre para el mensaje                           //
+    NSString *fileNameCR = [NSString stringWithFormat:@"tramo-CR.plist"];   // Nombre el horario Cordoba-Rabanales          //
+    NSString *fileNameRC = [NSString stringWithFormat:@"tramo-RC.plist"];   // Nombre el horario Rabanales-Cordoba          //
+    NSString *fileNameMS = [NSString stringWithFormat:@"mensaje.txt"];      // Nombre para el mensaje                       //
     //                                                                                                                          //
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //
@@ -411,185 +411,231 @@
     //******************** SE PROCEDE A LA DESCARGA DE LOS HORARIOS **********************
     //
     NSError *error = nil;
-    NSString *response=[NSString stringWithContentsOfURL:[NSURL URLWithString:URLdownload] encoding:NSUTF8StringEncoding error:&error];
-    //
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLdownload]];
+    NSURLResponse *response = [[NSURLResponse alloc] init];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
     //Se comprueba si se recibe respuesta del servidor
-    if (response)
-    {
+    if (data != nil)
+        {
         //******************** SE RECIBE RESPUESTA DEL SERVIDOR **********************
         //
+        
         //Se almacena el contenido descargado del servidor en un Array
-        NSArray* dataDownload = [response componentsSeparatedByString: @"//"];
+        NSDictionary *objectJSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         //
-        //Se comprueba si el servidor ha aceptado la consulta
-        if ([[dataDownload objectAtIndex:0]isEqual:@"On"])
-        {
-            //****************** EL SERVIDOR ACEPTA LA CONSULTA **********************
-            //
-            if ([[dataDownload objectAtIndex:1]isEqual:@"Ok"])
+        if (objectJSON != nil)
             {
-                //*********** EL SERVIDOR REALIZO CON EXITO LA CONSULTA **************
-                //
-                // Se define una bandera para comprobar si algo se actualiza
-                int banderaActualizacion=0;
-                //
-                //// - INICIANDO COMPROBACIÓN DE HORARIO CR
-                //
-                // Se obtiene el horario de la descarga
-                NSArray *dataDownloadCR = [[dataDownload objectAtIndex:2] componentsSeparatedByString:@"$$"];
-                //
-                //Se comprueba si el archivo ya existe
-                if ([[NSFileManager defaultManager] fileExistsAtPath:filePathCR])
+            //Se comprueba si el servidor ha aceptado la consulta
+            if ([[objectJSON valueForKey:@"status"]isEqual:@"On"])
                 {
-                    // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
-                    NSArray *dataFileCR = [[NSArray alloc] initWithContentsOfFile:filePathCR];
-                    //
-                    //Se comprueban si los codigos y fechas son iguales
-                    if(([[dataDownloadCR objectAtIndex:0]isEqual:[dataFileCR objectAtIndex:0]])&&([[dataDownloadCR objectAtIndex:2]isEqual:[dataFileCR objectAtIndex:2]]))
+                //****************** EL SERVIDOR ACEPTA LA CONSULTA **********************
+                //
+                if ([[objectJSON valueForKey:@"queryState"]isEqual:@"Ok"])
                     {
-                        //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
+                    //*********** EL SERVIDOR REALIZO CON EXITO LA CONSULTA **************
+                    //
+                    // Se define una bandera para comprobar si algo se actualiza
+                    NSUInteger banderaActualizacion=0;
+                    // Se obtiene un array con los horarios
+                    NSArray *dataDownloadSchedules = [objectJSON valueForKey:@"schedules"];
+                    //
+                    //// - INICIANDO COMPROBACIÓN DE HORARIO CR
+                    //
+                    // Se obtiene el horario de la descarga
+                    NSDictionary *dataDownloadCR = [dataDownloadSchedules objectAtIndex:0];
+                    //
+                    //Se comprueba si el archivo ya existe
+                    if ([[NSFileManager defaultManager] fileExistsAtPath:filePathCR])
+                        {
+                        // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
+                        NSArray *dataFileCR = [[NSArray alloc] initWithContentsOfFile:filePathCR];
                         //
-                        NSLog(@" #FAHorario: Horario CR no actualizado\n");
+                        //Se comprueban si los codigos y fechas son iguales
+                        if(([[dataDownloadCR valueForKey:@"id"]isEqual:[dataFileCR objectAtIndex:0]])&&([[dataDownloadCR valueForKey:@"date"]isEqual:[dataFileCR objectAtIndex:2]]))
+                            {
+                            //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
+                            //
+                            NSLog(@" #FAHorario: Horario CR no actualizado\n");
+                            }else{
+                                //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
+                                //
+                                //Se elimina el contenido actual del archivo
+                                [[NSFileManager defaultManager] removeItemAtPath:filePathCR error:nil];
+                                //
+                                NSArray *ScheduleFormat = [dataDownloadCR valueForKey:@"schedule"];
+                                NSString *generateSchedule = [NSString stringWithFormat:@"%@",[ScheduleFormat objectAtIndex:0]];
+                                for (NSUInteger counter = 1; counter < [ScheduleFormat count]; counter++) {
+                                    generateSchedule = [NSString stringWithFormat:@"%@|%@",generateSchedule,[ScheduleFormat objectAtIndex:counter]];
+                                }
+                                //
+                                NSArray *saveDataCR = [NSArray arrayWithObjects:[dataDownloadCR valueForKey:@"id"],[dataDownloadCR valueForKey:@"name"],[dataDownloadCR valueForKey:@"date"],generateSchedule,[dataDownloadCR valueForKey:@"activeDays"],@("n/a"),@("n/a"), nil];
+                                //Se crea un nuevo archivo con los datos nuevos
+                                [saveDataCR writeToFile:filePathCR atomically:YES];
+                                //
+                                NSLog(@" #FAHorario: Horario CR actualizado\n");
+                                //
+                                banderaActualizacion = 1; // Se considera como actualizado
+                            }
+                        }else{
+                            //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
+                            NSArray *ScheduleFormat = [dataDownloadCR valueForKey:@"schedule"];
+                            NSString *generateSchedule = [NSString stringWithFormat:@"%@",[ScheduleFormat objectAtIndex:0]];
+                            for (NSUInteger counter = 1; counter < [ScheduleFormat count]; counter++) {
+                                generateSchedule = [NSString stringWithFormat:@"%@|%@",generateSchedule,[ScheduleFormat objectAtIndex:counter]];
+                            }
+                            //
+                            NSArray *saveDataCR = [NSArray arrayWithObjects:[dataDownloadCR valueForKey:@"id"],[dataDownloadCR valueForKey:@"name"],[dataDownloadCR valueForKey:@"date"],generateSchedule,[dataDownloadCR valueForKey:@"activeDays"],@("n/a"),@("n/a"), nil];
+                            //Se crea un nuevo archivo con los datos nuevos
+                            [saveDataCR writeToFile:filePathCR atomically:YES];
+                            //
+                            NSLog(@" #FAHorario: Horario CR creado\n");
+                            //
+                            banderaActualizacion = 1; // Se considera como actualizado
+                        }
+                    //
+                    //// - INICIANDO COMPROBACIÓN DE HORARIO RC
+                    //
+                    // Se obtiene el horario de la descarga
+                    NSDictionary *dataDownloadRC = [dataDownloadSchedules objectAtIndex:1];
+                    //
+                    //Se comprueba si el archivo ya existe
+                    if ([[NSFileManager defaultManager] fileExistsAtPath:filePathRC])
+                        {
+                        // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
+                        NSArray *dataFileRC = [[NSArray alloc] initWithContentsOfFile:filePathRC];
+                        //
+                        //Se comprueban si los codigos y fechas son iguales
+                        if(([[dataDownloadRC valueForKey:@"id"]isEqual:[dataFileRC objectAtIndex:0]])&&([[dataDownloadRC valueForKey:@"date"]isEqual:[dataFileRC objectAtIndex:2]]))
+                            {
+                            //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
+                            //
+                            NSLog(@" #FAHorario: Horario RC no actualizado\n");
+                            }else{
+                                //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
+                                //
+                                //Se elimina el contenido actual del archivo
+                                [[NSFileManager defaultManager] removeItemAtPath:filePathRC error:nil];
+                                //
+                                NSArray *ScheduleFormat = [dataDownloadRC valueForKey:@"schedule"];
+                                NSString *generateSchedule = [NSString stringWithFormat:@"%@",[ScheduleFormat objectAtIndex:0]];
+                                for (NSUInteger counter = 1; counter < [ScheduleFormat count]; counter++) {
+                                    generateSchedule = [NSString stringWithFormat:@"%@|%@",generateSchedule,[ScheduleFormat objectAtIndex:counter]];
+                                }
+                                //
+                                NSArray *saveDataRC = [NSArray arrayWithObjects:[dataDownloadRC valueForKey:@"id"],[dataDownloadRC valueForKey:@"name"],[dataDownloadRC valueForKey:@"date"],generateSchedule,[dataDownloadRC valueForKey:@"activeDays"],@("n/a"),@("n/a"), nil];
+                                //Se crea un nuevo archivo con los datos nuevos
+                                [saveDataRC writeToFile:filePathRC atomically:YES];
+                                //
+                                NSLog(@" #FAHorario: Horario RC actualizado\n");
+                                //
+                                banderaActualizacion = 1; // Se considera como actualizado
+                            }
+                        }else{
+                            //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
+                            NSArray *ScheduleFormat = [dataDownloadRC valueForKey:@"schedule"];
+                            NSString *generateSchedule = [NSString stringWithFormat:@"%@",[ScheduleFormat objectAtIndex:0]];
+                            for (NSUInteger counter = 1; counter < [ScheduleFormat count]; counter++) {
+                                generateSchedule = [NSString stringWithFormat:@"%@|%@",generateSchedule,[ScheduleFormat objectAtIndex:counter]];
+                            }
+                            //
+                            NSArray *saveDataRC = [NSArray arrayWithObjects:[dataDownloadRC valueForKey:@"id"],[dataDownloadRC valueForKey:@"name"],[dataDownloadRC valueForKey:@"date"],generateSchedule,[dataDownloadRC valueForKey:@"activeDays"],@("n/a"),@("n/a"), nil];
+                            //Se crea un nuevo archivo con los datos nuevos
+                            [saveDataRC writeToFile:filePathRC atomically:YES];
+                            //
+                            NSLog(@" #FAHorario: Horario RC creado\n");
+                            //
+                            banderaActualizacion = 1; // Se considera como actualizado
+                        }
+                    //
+                    //// - INICIANDO COMPROBACIÓN DEL MENSAJE
+                    //
+                    NSString *downloadMS = [objectJSON valueForKey:@"message"];
+                    //
+                    //Se comprueba si el archivo ya existe
+                    if ([[NSFileManager defaultManager] fileExistsAtPath:filePathMS])
+                        {
+                        // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
+                        NSString *dataFileMS = [NSString stringWithContentsOfFile:filePathMS encoding:NSUTF8StringEncoding error:nil];
+                        //
+                        //Se comprueba si los mensajes son iguales
+                        if([downloadMS isEqual:dataFileMS])
+                            {
+                            //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
+                            //
+                            NSLog(@" #FAHorario: Mensaje no actualizado\n");
+                            }else{
+                                //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
+                                //
+                                //Se elimina el contenido actual del archivo
+                                [[NSFileManager defaultManager] removeItemAtPath:filePathMS error:nil];
+                                //
+                                //Se crea un nuevo archivo con los datos nuevos
+                                [downloadMS writeToFile:filePathMS atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                                //
+                                NSLog(@" #FAHorario: Mensaje actualizado\n");
+                            }
+                        }else{
+                            //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
+                            [downloadMS writeToFile:filePathMS atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                            //
+                            NSLog(@" #FAHorario: Mensaje creado\n");
+                        }
+                    //
+                    // Se verifica la bandera, 1 se a actualizado, 0 no
+                    if(banderaActualizacion==1)
+                        {
+                        return 0; // Se devuelve 0, puesto que se ha realizado al menos una actualización
+                        }else{
+                            return 1; // Se devuelve 1, puesto que no se ha realizado ninguna actualización
+                        }
                     }else{
-                        //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
+                        //********** EL SERVIDOR NO REALIZO CON EXITO LA CONSULTA ************
                         //
-                        //Se elimina el contenido actual del archivo
-                        [[NSFileManager defaultManager] removeItemAtPath:filePathCR error:nil];
-                        //
-                        //Se crea un nuevo archivo con los datos nuevos
-                        [dataDownloadCR writeToFile:filePathCR atomically:YES];
-                        //
-                        NSLog(@" #FAHorario: Horario CR actualizado\n");
-                        //
-                        banderaActualizacion = 1; // Se considera como actualizado
+                        //Se observa si el fallo de consulta falllida o por aplicación no permitida
+                        if (([[objectJSON valueForKey:@"queryState"]isEqual:@"Fail"])&&([[objectJSON valueForKey:@"reason"]isEqual:@"Release o versi\u00f3n de la aplicaci\u00f3n no valida"]))
+                            {
+                            NSLog(@" #FAHorario: %@\n",[objectJSON valueForKey:@"reason"]);
+                            //
+                            return 2; // Se devuelve 2, puesto que el servidor no permite la descarga a esta versión
+                            }else{
+                                NSLog(@" #FAHorario: %@\n",[objectJSON valueForKey:@"reason"]);
+                                //
+                                return 3; // Se devuelve 3, puesto que la consulta se a realizado de forma incorrecta
+                            }
                     }
                 }else{
-                    //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
-                    [dataDownloadCR writeToFile:filePathCR atomically:YES];
+                    //***************** EL SERVIDOR NO ACEPTA LA CONSULTA ********************
                     //
-                    NSLog(@" #FAHorario: Horario CR creado\n");
-                    //
-                    banderaActualizacion = 1; // Se considera como actualizado
-                }
-                //
-                //// - INICIANDO COMPROBACIÓN DE HORARIO RC
-                //
-                // Se obtiene el horario de la descarga
-                NSArray *dataDownloadRC = [[dataDownload objectAtIndex:3] componentsSeparatedByString:@"$$"];
-                //
-                //Se comprueba si el archivo ya existe
-                if ([[NSFileManager defaultManager] fileExistsAtPath:filePathRC])
-                {
-                    // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
-                    NSArray *dataFileRC = [[NSArray alloc] initWithContentsOfFile:filePathRC];
-                    //
-                    //Se comprueban si los codigos y fechas son iguales
-                    if(([[dataDownloadRC objectAtIndex:0]isEqual:[dataFileRC objectAtIndex:0]])&&([[dataDownloadRC objectAtIndex:2]isEqual:[dataFileRC objectAtIndex:2]]))
-                    {
-                        //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
+                    //Se observa si el fallo de no aceptar la consulta es por desconeción o otra cosa
+                    if ([[objectJSON valueForKey:@"status"]isEqual:@"Off"])
+                        {
+                        NSLog(@" #FAHorario: Error -> Servidor offline\n");
                         //
-                        NSLog(@" #FAHorario: Horario RC no actualizado\n");
-                    }else{
-                        //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
-                        //
-                        //Se elimina el contenido actual del archivo
-                        [[NSFileManager defaultManager] removeItemAtPath:filePathRC error:nil];
-                        //
-                        //Se crea un nuevo archivo con los datos nuevos
-                        [dataDownloadRC writeToFile:filePathRC atomically:YES];
-                        //
-                        NSLog(@" #FAHorario: Horario RC actualizado\n");
-                        //
-                        banderaActualizacion = 1; // Se considera como actualizado
-                    }
-                }else{
-                    //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
-                    [dataDownloadRC writeToFile:filePathRC atomically:YES];
-                    //
-                    NSLog(@" #FAHorario: Horario RC creado\n");
-                    //
-                    banderaActualizacion = 1; // Se considera como actualizado
-                }
-                //
-                //// - INICIANDO COMPROBACIÓN DEL MENSAJE
-                //
-                NSString *downloadMS = [dataDownload objectAtIndex:4];
-                //
-                //Se comprueba si el archivo ya existe
-                if ([[NSFileManager defaultManager] fileExistsAtPath:filePathMS])
-                {
-                    // Si es así se comprueba el contenido del archivo actual, con el contenido descargado
-                    NSString *dataFileMS = [NSString stringWithContentsOfFile:filePathMS encoding:NSUTF8StringEncoding error:nil];
-                    //
-                    //Se comprueba si los mensajes son iguales
-                    if([downloadMS isEqual:dataFileMS])
-                    {
-                        //**** EL CONTENIDO DESCARGADO ES EL MISMO QUE EL ACTUAL *****
-                        //
-                        NSLog(@" #FAHorario: Mensaje no actualizado\n");
-                    }else{
-                        //** EL CONTENIDO DESCARGADO NO ES EL MISMO QUE EL ACTUAL ***
-                        //
-                        //Se elimina el contenido actual del archivo
-                        [[NSFileManager defaultManager] removeItemAtPath:filePathMS error:nil];
-                        //
-                        //Se crea un nuevo archivo con los datos nuevos
-                        [downloadMS writeToFile:filePathMS atomically:YES encoding:NSUTF8StringEncoding error:nil];
-                        //
-                        NSLog(@" #FAHorario: Mensaje actualizado\n");
-                    }
-                }else{
-                    //EL ARCHIVO NO EXISTE, SE CREA UNO NUEVO CON LOS DATOS DESCARGADOS
-                    [downloadMS writeToFile:filePathMS atomically:YES encoding:NSUTF8StringEncoding error:nil];
-                    //
-                    NSLog(@" #FAHorario: Mensaje creado\n");
-                }
-                //
-                // Se verifica la bandera, 1 se a actualizado, 0 no
-                if(banderaActualizacion==1)
-                {
-                    return 0; // Se devuelve 0, puesto que se ha realizado al menos una actualización
-                }else{
-                    return 1; // Se devuelve 1, puesto que no se ha realizado ninguna actualización
+                        return 4; // Se devuelve 4, puesto que el servidor se encuentra desconectado
+                        }else{
+                            NSLog(@" #FAHorario: %@\n",[objectJSON valueForKey:@"reason"]);
+                            //
+                            return 5; // Se devuelve 5, puesto que el servidor a devuelto algun error de parametros
+                        }
                 }
             }else{
-                //********** EL SERVIDOR NO REALIZO CON EXITO LA CONSULTA ************
+                //******************* NO SE RECIBE RESPUESTA DEL SERVIDOR ********************
                 //
-                //Se observa si el fallo de consulta falllida o por aplicación no permitida
-                if ([[dataDownload objectAtIndex:1]isEqual:@"Fail"])
-                {
-                    NSLog(@" #FAHorario: Error -> Consulta fallida\n");
-                    //
-                    return 3; // Se devuelve 3, puesto que la consulta se a realizado de forma incorrecta
-                }else{
-                    NSLog(@" #FAHorario: Aplicación denegada por el servidor\n");
-                    //
-                    return 2; // Se devuelve 2, puesto que el servidor no permite la descarga a esta versión
-                }
+                //Se manda al log el error de la descarga
+                NSLog(@" #FAHorario: Error -> Imposible realizar la conexión\n%@\n", error);
+                //
+                return 6; // Se devuelve 6, puesto que es imposible establecer la conexión
             }
         }else{
-            //***************** EL SERVIDOR NO ACEPTA LA CONSULTA ********************
+            //******************* NO SE RECIBE RESPUESTA DEL SERVIDOR ********************
             //
-            //Se observa si el fallo de no aceptar la consulta es por desconeción o otra cosa
-            if ([[dataDownload objectAtIndex:0]isEqual:@"Off"])
-            {
-                NSLog(@" #FAHorario: Error -> Servidor offline\n");
-                //
-                return 4; // Se devuelve 4, puesto que el servidor se encuentra desconectado
-            }else{
-                NSLog(@" #FAHorario: %@\n",[dataDownload objectAtIndex:0]);
-                //
-                return 5; // Se devuelve 5, puesto que el servidor a devuelto algun error de parametros
-            }
+            //Se manda al log el error de la descarga
+            NSLog(@" #FAHorario: Error -> Imposible realizar la conexión\n%@\n", error);
+            //
+            return 6; // Se devuelve 6, puesto que es imposible establecer la conexión
         }
-    }else{
-        //******************* NO SE RECIBE RESPUESTA DEL SERVIDOR ********************
-        //
-        //Se manda al log el error de la descarga
-        NSLog(@" #FAHorario: Error -> Imposible realizar la conexión\n%@\n", error);
-        //
-        return 6; // Se devuelve 6, puesto que es imposible establecer la conexión
-    }
 }
+
 
 @end
