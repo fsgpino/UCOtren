@@ -84,6 +84,8 @@
         SombraProximaSalidaRabanalesACordoba.font = [UIFont fontWithName:@"Digital-7" size:50];
     }
     
+    
+    
     //Se establece el alternador y errorMemoria a 0
     alternador = 0;
     errorMemoria = 0;

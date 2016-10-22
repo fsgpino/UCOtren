@@ -32,6 +32,14 @@
         [self.window makeKeyAndVisible];
     }
     
+    //Alerta de App sin usar por vacaciones
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Información"
+                                                    message:@"El ciclo escolar ha finalizado.\n En septiembre se actualizará con los nuevos horarios del año 2013/2014."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Cerrar"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
     return YES;
 }
 							
